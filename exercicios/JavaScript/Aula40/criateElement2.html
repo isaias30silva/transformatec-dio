@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="main" style="background-color:aquamarine; padding: 45px;"></div>
+    
+</body>
+
+<script>
+
+    // criado o elemento na var elemento com o createElement, ou seja, o texto no innerHTML
+    var elemento = document.createElement("p")
+    elemento.innerHTML = "Texto criado dinamicamente e colocado dentro da div"
+
+    // transferindo o elemento criado no JavaScript para o HTML, por meio do id "main" e do .appendChild
+    document.getElementById("main").appendChild(elemento)
+
+    //aqui o elemento seria inserido fora da div, pois foi especificado para ser transferido no body da página.
+    //document.body.appendChild(elemento)
+
+</script>
+</html>

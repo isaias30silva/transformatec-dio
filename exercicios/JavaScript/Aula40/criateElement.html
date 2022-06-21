@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+</body>
+
+<script>
+
+//o createElement cria elementos no JavaScript que farão parte do body HTML. É preciso do document.body.appendchild para exibir o elemento criado. //
+let elemento = document.createElement("p");
+elemento.innerHTML = "Meu parágrafo criado no JS"
+
+elemento.style.color = "cadetblue"
+elemento.style.fontSize = "25px"
+
+//criação do elemento de forma dinâmica
+let novo_elemento = document.createElement("div")
+
+//estilo do elemento
+novo_elemento.style.backgroundColor = "cadetblue"
+
+//estilo do elemento
+novo_elemento.style.padding = "5px"
+
+//estilo do elemento
+novo_elemento.style.borderRadius = "5px"
+
+//texto do elemento
+novo_elemento.innerHTML = "Olá mundo"
+
+
+//Colocando os elementos no HTML
+document.body.appendChild(elemento)
+document.body.appendChild(novo_elemento)
+
+</script>
+
+</html>

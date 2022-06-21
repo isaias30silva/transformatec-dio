@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="minhaLista">
+        <li>café</li>
+        <li>leite</li>
+        <li>manteiga</li>
+        <li>pão francês</li>
+    </ul>
+
+</body>
+
+<script>
+
+    //criando um novo item para a lista
+    var novoItem = document.createElement("li")
+
+    //definindo qual será esse novo item com o createTextNode
+    var noTexto = document.createTextNode("Presunto");
+
+    //Transferindo o texto criado para o novo item, ou seja, "Presunto" para dentro do novo item de lista criado.
+    novoItem.appendChild(noTexto)
+
+    //criando uma variável para se comunicar com o id minhaLista do HTML
+    let lista = document.getElementById("minhaLista")
+
+    //usando a variável criada para enviar o item criado no JavaScript na primeira posição da lista. Se quisesse na segunda posição, seria [1], na terceira, [2] e assim por diante
+    lista.insertBefore(novoItem,lista.children[0])
+
+</script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- criando um campo para o usuário inserir itens -->
+    <input type="text" id = "item" placeholder="Novo Item">
+
+    <!-- criando o botão que chamará a função de inserir o item informado no campo anterior -->
+    <button onclick="inserirItem()">Inserir</button>
+
+    <!-- criando o campo respectivo ao índice do item removido -->
+    <input type="number" id="indice" placeholder="Índice do item removido">
+
+    <!-- criando o botão que chamará a função de remoção do item -->
+    <button onclick="removerItem()">Remover</button>
+
+    <ul id="minhaLista">
+        
+    </ul>
+
+</body>
+
+    <script>
+
+        //criando a função de inserir item. toda a vez que o botão inserirItem for clicado, o valor digitado no campo insert será adicionado à lista.
+        function inserirItem() {
+
+            const item = document.getElementById("item").value
+
+            let novoItem = document.createElement("li")
+            let noTexto = document.createTextNode(item)
+
+            novoItem.appendChild(noTexto)
+
+            let lista = document.getElementById("minhaLista")
+
+            lista.insertBefore(novoItem,lista.children[0])
+
+        }
+
+
+        //criando a função de remover item. toda a vez que o botão removerItem for clicado, o valor digitado no campo insert será removido da lista.
+        function removerItem() {
+
+            let indice = document.getElementById("indice").value
+
+            let lista = document.getElementById("minhaLista")
+
+            //aqui converte o indice para número, pois tudo que vem da função é string, e índices são números.
+            indice = Number(indice)
+
+            //aqui vai remover o filho da lista, que foi inserido por meio da função inserirItem.
+            lista.removeChild(lista.children[indice])
+        }
+
+
+    </script>
+
+</html>

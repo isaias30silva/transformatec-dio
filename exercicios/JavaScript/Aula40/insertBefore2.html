@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- inserindo um campo de preenchimento pelo usuário -->
+    <input type="text" id="item" placeholder="Novo Item">
+
+    <!-- abaixo do campo de preenchimento, inserindo um botão para adicionar itens à lista toda a vez que for clicado, pois há o evento onclick chamando a função inserirItem-->
+    <button id="inserir" onclick="inserirItem()">Inserir</button>
+
+    <ul id="minhaLista">
+        <li>café</li>
+        <li>leite</li>
+        <li>manteiga</li>
+        <li>pão francês</li>
+    </ul>
+
+</body>
+
+<script>
+
+    //criando a função inserir item, para que toda a vez que o botão for clicado execute a ação descrita abaixo
+    function inserirItem() {
+
+        let item = document.getElementById("item").value
+
+        var novoItem = document.createElement("li")
+
+
+        var noTexto = document.createTextNode(item);
+
+        novoItem.appendChild(noTexto)
+
+        let lista = document.getElementById("minhaLista")
+
+        lista.insertBefore(novoItem,lista.children[0])
+
+    }
+
+</script>
+</html>

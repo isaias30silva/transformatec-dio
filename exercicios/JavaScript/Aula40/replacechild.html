@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- criando os itens nativos da lista -->
+    <ul id="minhaLista">
+        <li>Café</li>
+        <li>Manteiga</li>
+        <li>Margarina</li>
+    </ul>
+
+    <!-- criando o botão com o evento onclick. toda a vez que for clicado, fará a função substituir, ou seja, troca um item da lista por outro -->
+    <button onclick="substituir()">Substituir</button>
+
+    
+</body>
+
+<script>
+
+    //criando a função substituir que será acionada sempre que o botão substituir for clicado
+    function substituir() {
+
+        //a constante criada para acessar a lista, vai pegar o primeiro item, na posição [0]
+        const elemento = document.getElementById("minhaLista").children[0]
+
+        //uma nova constante criada com o nome "Leite" que será inserida à lista
+        const novoElemento = document.createTextNode("Leite")
+
+        //a primeira constante criada para acessar o primeiro item da lista agora fará a substituição deste item pela segunda constante criada, com o valor "Leite". assim, o leite ocupará o lugar do café na lista.
+        elemento.replaceChild(novoElemento,elemento.childNodes[0])
+    }
+
+</script>
+</html>
