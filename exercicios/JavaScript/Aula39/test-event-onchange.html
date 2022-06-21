@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Selecione o seu artista preferido</p>
+
+    <!-- O evento onChange é aplicado para alterar as escolhas de uma caixa de seleção. Ele muda o valor do elemento -->
+    <select id="artistas" onchange="selecionarArtistas()">
+
+        <option value="Raimundos">Raimundos</option>
+        <option value="Tim Maia">Tim Maia</option>
+        <option value="Bezerra da Silva">Bezerra da Silva</option>
+        <option value="Legião Urbana">Legião Urbana</option>
+        <option value="O Rappa">O Rappa</option>
+
+    </select>
+
+    <p id="resultado"></p>
+
+<script>
+
+    function selecionarArtistas() {
+        let artista = document.getElementById("artistas").value
+
+        document.getElementById("resultado").innerHTML = "Música da boa: " + artista
+    }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="minha_div" class="minhadiv">
+
+        <p>Texto dentro da página</p>
+
+    </div>
+
+</body>
+
+<script>
+
+    //mouseover: quando o mouse estiver sobre o elemento, haverá mudança de estilo
+    document.getElementById("minha_div").addEventListener("mouseover", mouseEmCima)
+
+    //mouseout: quando o mouse estiver fora do elemento, haverá mudança de estilo
+    document.getElementById("minha_div").addEventListener("mouseout", mouseFora)
+
+    function mouseEmCima() {
+        document.getElementById("minha_div").style.background = "cadetblue"
+        document.getElementById("minha_div").style.padding = "10px"
+        document.getElementById("minha_div").style.fontFamily = "Verdana"
+    }
+
+    function mouseFora() {
+        document.getElementById("minha_div").style.background = "coral"
+        document.getElementById("minha_div").style.padding = "0px"
+        document.getElementById("minha_div").style.fontFamily = "Arial"
+    }
+
+</script>
+
+</html>
