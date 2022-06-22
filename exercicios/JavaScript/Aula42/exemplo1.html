@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 1</title>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <input type="text" name="name" id="name" placeholder="Nome" onblur="changeColor()" onfocus="returnColor()">
+
+        <input type="password" name="password" id="password" placeholder="Senha">
+
+        <input type="submit" id="submit" onclick="ola()">
+
+    </div>
+
+
+</body>
+
+<script>
+
+    function returnColor() {
+        document.getElementById("name").style.background = "white"
+    }
+
+    function changeColor() {
+        document.getElementById("name").style.background = "coral"
+    }
+
+    function ola() {
+        var nome = document.getElementById("name").value
+
+        var senha = document.getElementById("password").value
+
+        document.getElementById("name").focus()
+    }
+
+</script>
+
+</html>
