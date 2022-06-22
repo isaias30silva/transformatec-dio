@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de cadastro de usuário</title>
+</head>
+<body>
+
+    <div id="formulario">
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="text" id="sobrenome" placeholder="Sobrenome">
+        <input type="text" id="endereco" placeholder="Endereço">
+        <input type="number" id="cep" placeholder="CEP">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="senha" placeholder="Senha">
+        <input type="password" id="confirmar" placeholder="Confirmar senha">
+        <input type="submit" id="enviar_btn" value="Enviar" onclick="cadastrar()">
+    </div>
+
+    <p id="resultado"></p>
+
+</body>
+
+<script>
+
+    function cadastrar() {
+
+        let promessa = new Promise(
+
+            function(sucesso, erro) {
+
+                let nome = document.getElementById("nome").value
+                let sobrenome = document.getElementById("sobrenome").value
+                let endereco = document.getElementById("endereco").value
+                let cep = document.getElementById("cep").value
+                let email = document.getElementById("email").value
+                let senha = document.getElementById("senha").value
+                let confirmar = document.getElementById("confirmar").value
+
+                if(!nome || !sobrenome || !endereco || !cep || !email || !senha || !confirmar) {
+                    erro("Não são permitidos campos em branco")
+                } else if (senha != confirmar) {
+                    erro("Senhas não conferem!")
+                } else {
+
+                    let usuario = {
+                        "nome": nome,
+                        "sobrenome": sobrenome,
+                        "endereco": endereco,
+                        "cep": cep,
+                        "email": email,
+                        "senha": senha,
+                        "confirmar": confirmar
+
+                    }
+
+                    sucesso(JSON.stringify(usuario))
+                }
+
+            }
+
+        ).then(
+            function(sucesso) {
+                exibir(sucesso)
+            }
+        ).catch(
+            function(err) {
+                exibir(err)
+            }
+        )
+
+    }
+
+    function exibir(mensagem) {
+        document.getElementById("resultado").innerHTML = mensagem
+    }
+
+
+</script>
+
+</html>
