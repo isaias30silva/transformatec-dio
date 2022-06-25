@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisando CEP - ViaCEP</title>
+</head>
+<body>
+
+    <input type="text" id="cep" placeholder="CEP" onblur="buscaCEP()">
+
+</body>
+
+<script>
+
+    function buscaCEP() {
+
+        let cep = document.getElementById("cep").value
+
+        console.log("CEP: ", cep)
+
+        let url = `https://viacep.com.br/ws/${cep}/json/`
+
+        console.log("URL: ", url)
+
+        fetch(url)
+        .then(result => result.json())
+        .then(json_result => console.log(json_result))
+
+    }
+
+</script>
+
+
+</html>
