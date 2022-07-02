@@ -1,10 +1,11 @@
 import './App.css';
 import AddUserForm from './components/AddUserForm';
+import Users from './components/Users';
 
 function App() {
   return (
     <div className="App">
-      <AddUserForm />
+      <Users />
 
     </div>
   );
