@@ -1,31 +1,22 @@
 import React from "react";
 import Layout from "./components/layout";
+import Profile from "./components/profile";
+import Repositories from "./components/repositories";
+import { ResetCSS } from "./global/resetCSS";
+import GithubProvider from "./providers/github-provider";
 
-function App() {
-  return <main>
+const App = () => {
+  return (
+    <main>
+      <GithubProvider>
+    <ResetCSS />
     <Layout>
-      <div>
-          <img source="https://avatars.githubusercontent.com/u/39008435?v=4" alt="Avatar of user"></img>
-          <h1>Matheus Benites</h1>
-          <h3>Username: </h3>
-          <span>benits</span>
-          <div>
-            <h4>Followers</h4>
-              <span>5</span>
-          </div>
-          <div>
-            <h4>Starreds</h4>
-              <span>5</span>
-          </div>
-          <div>
-            <h4>Followings</h4>
-              <span>5</span>
-          </div>
-        <div>Repositories</div>
-        <div>Starreds</div>
-      </div>
+      <Profile />
+      <Repositories />
     </Layout>
-  </main>;
-}
+    </GithubProvider>
+  </main>
+  );
+};
 
 export default App;
