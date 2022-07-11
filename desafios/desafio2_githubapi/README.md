@@ -2,6 +2,20 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About project
+
+This project was developed by Isaias Menezes, student and participant of "TransformaTec", an educational iniciative by Digital Innovation One and Carrefour.
+
+The objective was to construct a frontend application that shows informations about Github users, using the github public api. 
+
+All the credits about this project is to Matheus Benites, from the Youtube Channel "O Matheus Benites".
+
+## Preview
+
+Print of the finished projetc:
+
+![](C:\Users\isaia\Desktop\react.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
