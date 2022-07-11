@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import useGithub from "../../hooks/github-hooks";
 import * as S from "./styled";
 import RepositoryItem from "../repository-item";
 
 const Repositories = () => {
-    return <S.WrapperTabs
+
+    const { githubState, getUserRepos, getUserStarred } = useGithub();
+    const [hasUserForSearchrepos, setHasUserForSearchrepos] = useState(false);
+
+    useEffect(() => {
+        if (githubState.user.login){
+            getUserRepos(githubState.user.login);
+            getUserStarred(githubState.user.login);
+        }
+        setHasUserForSearchrepos(githubState.repositories);
+    }, [githubState.user.login]);
+
+    return (
+        <>
+            {hasUserForSearchrepos ? (
+    <S.WrapperTabs
         selectedTabClassName="is-selected"
         selectedTabPanelClassName="is-selected"
     >
@@ -12,18 +28,35 @@ const Repositories = () => {
             <S.WrapperTab>Starred</S.WrapperTab>
         </S.WrapperTabList>
         <S.WrapperTabPanel>
-            <RepositoryItem 
-                name="repo 1" linkTo Repo="https://github.com/isaias30silva"
-                fullName="isaias30silva"
+            <S.WrapperList>
+            {githubState.repositories.map(item => (
+                <RepositoryItem 
+                key={item.id}
+                name={item.name} 
+                linkToRepo={item.html_url}
+                fullName={item.full_name}
                 />
+            ))}
+            </S.WrapperList>
         </S.WrapperTabPanel>
         <S.WrapperTabPanel>
-            <RepositoryItem 
-                name="repo 2" linkTo Repo="https://github.com/isaias30silva"
-                fullName="isaias30silva"
+        <S.WrapperList>
+        {githubState.starred.map(item => (
+                <RepositoryItem 
+                key={item.id}
+                name={item.name} 
+                linkToRepo={item.html_url}
+                fullName={item.full_name}
                 />
+            ))}
+        </S.WrapperList>
         </S.WrapperTabPanel>
-    </S.WrapperTabs>;
-}
+    </S.WrapperTabs>
+    ) : (
+        <></>
+    )}
+    </>
+    );
+};
 
 export default Repositories

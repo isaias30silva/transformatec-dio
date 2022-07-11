@@ -6,13 +6,15 @@ export const GithubContext = createContext({
     user: {},
     repositories: [],
     starred: [],
-})
+});
 
-const GithubProvider = ({children}) => 
-{
+const GithubProvider = ({children}) => {
         const [githubState, setGithubState] = useState({
+            hasUser: false,
             loading: false,
             user: {
+                id: undefined,
+                avatar: undefined,
                 login: undefined,
                 name: undefined,
                 html_url: undefined,
@@ -27,27 +29,63 @@ const GithubProvider = ({children}) =>
         });
 
         const getUser = (username) => {
-            api.get(`users/${username}`).then(({ data: { user }}) => {
+            setGithubState((prevState) => ({
+                ...prevState,
+                loading: !prevState.loading,
+            }));
+
+            api
+            .get(`users/${username}`)
+            .then(({ data }) => {
                 setGithubState((prevState) => ({
                     ...prevState,
+                    hasUser: true,
                     user: {
-                        login: user.login,
-                        name: user.name,
-                        html_url: user.html_url,
-                        location: user.location,
-                        followers: user.followers,
-                        following: user.following,
-                        public_gists: user.public_gists,
-                        public_repos: user.public_repos,
+                        id: data.id,
+                        avatar: data.avatar_url,
+                        login: data.login,
+                        name: data.name,
+                        html_url: data.html_url,
+                        location: data.location,
+                        followers: data.followers,
+                        following: data.following,
+                        public_gists: data.public_gists,
+                        public_repos: data.public_repos,
                     },
                 }));
-            });
+            })
+            .finally(() => {
+                setGithubState((prevState) => ({
+                    ...prevState,
+                    loading: !prevState.loading,
+                }));
+            });  
         };
+
+        const getUserRepos = (username) => {
+            api.get(`users/${username}/repos`).then(({ data }) => {
+                    setGithubState((prevState) => ({
+                        ...prevState,
+                        repositories: data,
+                    }));
+                });
+        };
+
+        const getUserStarred = (username) => {
+            api.get(`users/${username}/starred`).then(({ data }) => {
+                    setGithubState((prevState) => ({
+                        ...prevState,
+                        starred: data,
+                    }));
+                });
+        };
+
 
         const contextValue = {
             githubState,
             getUser: useCallback ((username) => getUser(username), []),
-
+            getUserRepos: useCallback ((username) => getUserRepos(username), []),
+            getUserStarred: useCallback ((username) => getUserStarred(username), []),
         };
 
     return (
