@@ -14,7 +14,7 @@ All the credits about this project is to Matheus Benites, from the Youtube Chann
 
 Print of the finished projetc:
 
-![](C:\Users\isaia\Desktop\react.png)
+
 
 ## Available Scripts
 
