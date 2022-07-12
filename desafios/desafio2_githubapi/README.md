@@ -12,7 +12,9 @@ All the credits about this project is to Matheus Benites, from the Youtube Chann
 
 ## Preview
 
-Print of the finished projetc:
+Print of the finished project:
+
+![](C:\Users\isaia\Desktop\react.png)
 
 
 
