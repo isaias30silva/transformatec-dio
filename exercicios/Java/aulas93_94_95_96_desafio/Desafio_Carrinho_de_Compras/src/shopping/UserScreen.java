@@ -98,6 +98,18 @@ public class UserScreen implements UserInterface {
                 //mostra a lista de produtos no carrinho
                     showCart();
                     break;
+                case 3:
+                //mostra a quantidade de produtos no carrinho
+                    itemsCount();
+                    break;
+                case 4:
+                //mostra os preços dos produtos no carrinho
+                    listCartPrices();
+                    break;
+                case 5:
+                //mostra o total de compras do carrinho
+                    getCartTotalPrice();
+                    break;
                 case 0:
                     System.out.println("Bye!");
                     System.exit(0);

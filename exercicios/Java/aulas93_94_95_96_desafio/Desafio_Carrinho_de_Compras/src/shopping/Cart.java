@@ -21,9 +21,11 @@ public class Cart extends CartOperations {
 
     //--------------------------------Métodos lambda-------------------
 
+    //implementação do método abstrato da classe CartOperations
     @Override
     public void getCartTotalPrice(){
-        //definindo o fluxo
+        
+        //Stream reduce() que retorna a soma dos preços dos produtos no carrinho
         Double totalPrice = cartItems.stream()
         .map(cartItem -> cartItem.getPrice())
         .reduce(0.0, (subTotal, cartItem) -> subTotal + cartItem);
@@ -31,8 +33,11 @@ public class Cart extends CartOperations {
         System.out.println(totalPrice);
     }
 
+    //implementação do método da classe CartOperations
     @Override
     public void listCartPrices(){
+
+        //Stream map() que gera uma nova lista contando os preços dos itens no carrinho
         List<Double> cartPrices = cartItems.stream()
         .map(cartItem -> cartItem.getPrice()).toList();
 
@@ -40,8 +45,11 @@ public class Cart extends CartOperations {
 
     }
 
+    //implementação do método de classe CarOperations
     @Override
     public void itemsCount(){
+
+        //Stream count() que conta a quantidade de itens no carrinho
         Long itemsQt = cartItems.stream().count();
         System.out.println(itemsQt);
         

@@ -8,6 +8,7 @@ public abstract class CartOperations {
     //cria uma lista apenas com os preços dos produtos
     public void listCartPrices(){}
 
+    //cria uma lista com a quantidade de itens 
     public void itemsCount(){}
     
 }
