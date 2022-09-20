@@ -64,7 +64,7 @@ public class UserScreen implements UserInterface {
     public void removeProductFromCart() {
         int id = getUserInput();
         System.out.println("Removendo produtos com o ID" + id);
-        cart.removeFromCart(id);
+        cart.removeProduct(id);
     }
 
     //menu de produtos para adicionar ou remover do carrinho

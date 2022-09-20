@@ -3,7 +3,7 @@ package shopping;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cart {
+public class Cart extends CartOperations {
     
     List<Product> cartItems = new ArrayList<Product>();
 
@@ -19,8 +19,46 @@ public class Cart {
         addToCart(product);
     }
 
+    //--------------------------------Métodos lambda-------------------
+
+    @Override
+    public void getCartTotalPrice(){
+        //definindo o fluxo
+        Double totalPrice = cartItems.stream()
+        .map(cartItem -> cartItem.getPrice())
+        .reduce(0.0, (subTotal, cartItem) -> subTotal + cartItem);
+
+        System.out.println(totalPrice);
+    }
+
+    @Override
+    public void listCartPrices(){
+        List<Double> cartPrices = cartItems.stream()
+        .map(cartItem -> cartItem.getPrice()).toList();
+
+        cartPrices.stream().forEach(cartPrice -> System.out.println(cartPrice));
+
+    }
+
+    @Override
+    public void itemsCount(){
+        Long itemsQt = cartItems.stream().count();
+        System.out.println(itemsQt);
+        
+    }
+
+    //---------------------------------FIM métodos lambda--------------
+
+
+    //criando método para adicionar um produto à lista de itens do carrinho
+    private void addToCart(Product product) {
+
+    //adicionando itens à coleção
+        cartItems.add(product);
+    }
+
     //criando método para remover um produto do carrinho
-    public void removeFromCart(Integer id) {
+    public void removeProduct(Integer id) {
 
         Product product = getProductById(id);
         cartItems.remove(product);
@@ -47,13 +85,6 @@ public class Cart {
         }
 
         return product;
-    }
-
-    //criando método para adicionar um produto à lista de itens do carrinho
-    private void addToCart(Product product) {
-
-        //adicionando itens à coleção
-        cartItems.add(product);
     }
 
     //método para imprimir a lista de produtos do carrinho
