@@ -1,0 +1,67 @@
+Aula 99 - Modelando suas primeiras tabelas
+
+Tabela = persistência de dados
+
+Em um banco de dados relacional as tabelas representam as entidades do sistema,
+que armazenam os dados tratados pela aplicação.
+
+A tabela também pode ser chamada de relação, já que um banco de dados relacional
+pode ter uma ou mais relações.
+
+Coluna:
+É responsávelpor armazenar apenas um tipo específico de dados,
+podendo ser nulo ou não
+
+Tupla:
+Um registro de um determinado dado, identificado por uma chave
+primária, e que não pode ser duplicado.
+
+Relacionamento
+É a associação entre as tabelas do banco de dados, sendo conectado através
+de chaves primárias e estrangeiras.
+
+Constraints(Restrições)
+Regras específicas aplicadas nas colunas de uma tabela, ou na tabela em si.
+É possível definir restrições em colunas e em tabelas, permitindo um grande
+controle sobre os dados armazenados.
+
+Constraints:
+chave primária, chave estrangeira, NOT NULL, CHECK, UNIQUE
+
+Chave primária(primary key)
+é um atributo (ou coluna) que identifica um registro de forma única
+
+Chave estrangeira(foreign key)
+é um atributo que define a forma que as tabelas se relacionam entre si.
+a foreign key faz relação a uma primary key.
+
+NOT NUll
+impede que uma coluna aceite valores nulos.
+obriga um campo a sempre possuir um valor inserido.
+
+CHECK
+permite especificar se o valor em uma dada coluna deve satisfazer
+a uma expressão lógica(booleana), ou seja, se pode retornar um
+valor verdadeiro ou falso.
+
+UNIQUE
+garante que os dados contidos em uma coluna ou grupo de colunas
+em uma tabela do banco de dados sejam únicos.
+UNIQUE e primary key garantem a unicidade em uma coluna ou conjunto de colunas.
+
+Tipos de relacionamentos - BD
+
+Um para um - 1:1
+ocorre quando duas tabelas se relacionam de forma direta
+onde a chave primária de uma tabela é utilizada uma única vez em outra tabela.
+
+Um para muitos - 1:n
+duas tabelas se relacionam de forma direta onde a chave
+primária de uma tabela é utilizada várias vezes em outra tabela
+
+Muitos para muitos - n:n
+acontece de forma indireta entre duas tabelas, gerando de uma terceira tabela.
+
+Modelar a tabela = criá-la
+
+Exercícios utilizando o Elephantsql, de criação de tabela e relacionamentos.
