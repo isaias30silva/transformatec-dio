@@ -1,0 +1,52 @@
+Aula 98 - Introdução ao SQL
+
+SQL - linguagem
+DB - Data Base
+
+Banco de Dados: a organização e armazenagem
+de informações sobre um domínio específico.
+O Banco de Dados é responsável pela camada
+de persistência dos dados em um sistema.
+
+Os objetivos de um sistema de banco de dados são:
+- isolar o usuário dos detalhes internos
+do banco de dados (abstração de dados);
+- promover a independência dos dados em relação
+às aplicações(acesso e armazenamento)
+
+Banco de Dados Relacional
+Permite a implementação de funcionalidades
+para registro, consulta e manipulação de
+informações.
+É um mecanismo de armazenamento de dados
+em tableas que possuem relacionamentos entre si.
+
+SQL
+É uma linguagem padrão para trabalhar com
+bancos de dados relacionais.
+SQL significa Structured Query Language,
+ou Linguagem de Pesquisa Estruturada
+
+SQL é uma linguagem declarativa e não necessita
+de profundos conhecimentos de programação
+escrever queries, ou seja, as consultas para retornar
+dados.
+
+Query = pesquisa
+
+SQL surgiu a partir de um estudo realizado
+na década de 70 pelo laboratório da IBM para elaborar
+uma linguagem para simplificar o gerenciamento
+de informações em bancos de dados do tipo relacional(baseado em tabelas)
+
+Existem diversos sistemas de bancos de dados que utilizam o SQL,
+mas a sintaxe é semelhante em todos (postreSQL, mySQL, etc)
+
+PostgreSQL
+É um sistema avançado de gerenciamento
+de banco de dados objeto-relacional
+
+Nesta aula aprendemos a criar uma instância no ElephantSQL, um banco de dados na nuvem
+www.elephantsql.com
+
+
