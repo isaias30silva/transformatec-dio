@@ -1,0 +1,34 @@
+Aula 100 - Praticando os principais comandos SQL
+
+A linguagem SQL possui um conjunto de comandos utilizados para a interação com os dados
+armazenados em um DB
+
+A linguagem SQL possui comandos classificados em quatro subconjuntos:
+DDL (Definição de dados) = create, alter, drop, truncate, rename
+DML (manipulação de dados) = select, insert, update, delete, merge
+DCL (controle de dados) = grant, revoke
+TCL (transações) = commit, rollback, savepoint
+
+DDL: DATA DEFINITION LANGUAGE
+CREATE - criar tabela no BD,
+ALTER - alterar uma tabela criada,
+DROP - excluir uma tabela criada, 
+TRUNCATE - remover os dados da tabela, mantendo a tabela,
+RENAME - renomear a tabela
+
+DML: DATA MANIPULATION LANGUAGE
+INSERT - adicionar registros a uma tabela,
+UPDATE - atualizar os registros inseridos,
+DELETE - remover registros inseridos,
+SELECT - buscar registros na tabela
+
+DCL: DATA CONTROL LANGUAGE
+GRANT - atribuir: definir permissões de acesso aos registros;
+REVOKE - revogar(deixar de valer, existir): remove permissões de acesso aos registros;
+
+TCL: TRANSACTION CONTROL LANGUAGE
+COMMIT - confirma uma transação no BD,
+ROLLBACK - reverte uma transação para o último Commit executado,
+SAVEPOINT - cria um ponto de salvamento, como um ponto de restauração
+
+Exercícios no ElephantSQL 
