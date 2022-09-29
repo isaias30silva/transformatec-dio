@@ -1,0 +1,194 @@
+Aula 98 - Introdução ao SQL
+
+SQL - linguagem
+DB - Data Base
+
+Banco de Dados: a organização e armazenagem
+de informações sobre um domínio específico.
+O Banco de Dados é responsável pela camada
+de persistência dos dados em um sistema.
+
+Os objetivos de um sistema de banco de dados são:
+- isolar o usuário dos detalhes internos
+do banco de dados (abstração de dados);
+- promover a independência dos dados em relação
+às aplicações(acesso e armazenamento)
+
+Banco de Dados Relacional
+Permite a implementação de funcionalidades
+para registro, consulta e manipulação de
+informações.
+É um mecanismo de armazenamento de dados
+em tableas que possuem relacionamentos entre si.
+
+SQL
+É uma linguagem padrão para trabalhar com
+bancos de dados relacionais.
+SQL significa Structured Query Language,
+ou Linguagem de Pesquisa Estruturada
+
+SQL é uma linguagem declarativa e não necessita
+de profundos conhecimentos de programação
+escrever queries, ou seja, as consultas para retornar
+dados.
+
+Query = pesquisa
+
+SQL surgiu a partir de um estudo realizado
+na década de 70 pelo laboratório da IBM para elaborar
+uma linguagem para simplificar o gerenciamento
+de informações em bancos de dados do tipo relacional(baseado em tabelas)
+
+Existem diversos sistemas de bancos de dados que utilizam o SQL,
+mas a sintaxe é semelhante em todos (postreSQL, mySQL, etc)
+
+PostgreSQL
+É um sistema avançado de gerenciamento
+de banco de dados objeto-relacional
+
+Nesta aula aprendemos a criar uma instância no ElephantSQL, um banco de dados na nuvem
+www.elephantsql.com
+
+___________________________________________________________________________________________
+
+Aula 99 - Modelando suas primeiras tabelas
+
+Tabela = persistência de dados
+
+Em um banco de dados relacional as tabelas representam as entidades do sistema,
+que armazenam os dados tratados pela aplicação.
+
+A tabela também pode ser chamada de relação, já que um banco de dados relacional
+pode ter uma ou mais relações.
+
+Coluna:
+É responsávelpor armazenar apenas um tipo específico de dados,
+podendo ser nulo ou não
+
+Tupla:
+Um registro de um determinado dado, identificado por uma chave
+primária, e que não pode ser duplicado.
+
+Relacionamento
+É a associação entre as tabelas do banco de dados, sendo conectado através
+de chaves primárias e estrangeiras.
+
+Constraints(Restrições)
+Regras específicas aplicadas nas colunas de uma tabela, ou na tabela em si.
+É possível definir restrições em colunas e em tabelas, permitindo um grande
+controle sobre os dados armazenados.
+
+Constraints:
+chave primária, chave estrangeira, NOT NULL, CHECK, UNIQUE
+
+Chave primária(primary key)
+é um atributo (ou coluna) que identifica um registro de forma única
+
+Chave estrangeira(foreign key)
+é um atributo que define a forma que as tabelas se relacionam entre si.
+a foreign key faz relação a uma primary key.
+
+NOT NUll
+impede que uma coluna aceite valores nulos.
+obriga um campo a sempre possuir um valor inserido.
+
+CHECK
+permite especificar se o valor em uma dada coluna deve satisfazer
+a uma expressão lógica(booleana), ou seja, se pode retornar um
+valor verdadeiro ou falso.
+
+UNIQUE
+garante que os dados contidos em uma coluna ou grupo de colunas
+em uma tabela do banco de dados sejam únicos.
+UNIQUE e primary key garantem a unicidade em uma coluna ou conjunto de colunas.
+
+Tipos de relacionamentos - BD
+
+Um para um - 1:1
+ocorre quando duas tabelas se relacionam de forma direta
+onde a chave primária de uma tabela é utilizada uma única vez em outra tabela.
+
+Um para muitos - 1:n
+duas tabelas se relacionam de forma direta onde a chave
+primária de uma tabela é utilizada várias vezes em outra tabela
+
+Muitos para muitos - n:n
+acontece de forma indireta entre duas tabelas, gerando de uma terceira tabela.
+
+Modelar a tabela = criá-la
+
+Exercícios utilizando o Elephantsql, de criação de tabela e relacionamentos.
+
+___________________________________________________________________________________
+
+Aula 100 - Praticando os principais comandos SQL
+
+A linguagem SQL possui um conjunto de comandos utilizados para a interação com os dados
+armazenados em um DB
+
+A linguagem SQL possui comandos classificados em quatro subconjuntos:
+DDL (Definição de dados) = create, alter, drop, truncate, rename
+DML (manipulação de dados) = select, insert, update, delete, merge
+DCL (controle de dados) = grant, revoke
+TCL (transações) = commit, rollback, savepoint
+
+DDL: DATA DEFINITION LANGUAGE
+CREATE - criar tabela no BD,
+ALTER - alterar uma tabela criada,
+DROP - excluir uma tabela criada, 
+TRUNCATE - remover os dados da tabela, mantendo a tabela,
+RENAME - renomear a tabela
+
+DML: DATA MANIPULATION LANGUAGE
+INSERT - adicionar registros a uma tabela,
+UPDATE - atualizar os registros inseridos,
+DELETE - remover registros inseridos,
+SELECT - buscar registros na tabela
+
+DCL: DATA CONTROL LANGUAGE
+GRANT - atribuir: definir permissões de acesso aos registros;
+REVOKE - revogar(deixar de valer, existir): remove permissões de acesso aos registros;
+
+TCL: TRANSACTION CONTROL LANGUAGE
+COMMIT - confirma uma transação no BD,
+ROLLBACK - reverte uma transação para o último Commit executado,
+SAVEPOINT - cria um ponto de salvamento, como um ponto de restauração
+
+Exercícios no ElephantSQL 
+_____________________________________________________________________________________________
+
+AULA 101 - Criando Queries em SQL
+
+Queries - instruções para interação com os dados registrados em tabelas de banco de dados.
+
+Cláusulas do SELECT:
+WHERE - filtrar registros por uma condição,
+DISTINCT - selecionar registros sem repetições,
+ORDER BY - ordenar registros (pode ser ascendente ou descendente),
+LIMIT/FETCH - obter um subconjunto de registros,
+GROUP BY - agrupar registros com base em uma coluna,
+HAVING - utilizado junto com o Group BY, define uma condição para agrupar os itens,
+JOINS - combinar colunas com valores correspondentes entre tabelas,
+UNION/INTERSECT/EXCEPT - operações matemáticas de conjuntos
+
+Funções de agregação
+realizm um cálculo sobre uma série de linhas (registros) e retornam apenas uma simples linha.
+atuam como um espécie de reducer.
+
+AVG: retorna um valor médio entre os selecionados,
+COUNT: retorna a quantidade de valores selecionados,
+MAX: retorna o valor máximo entre os selecionados,
+MIN: retorna o valor mínimo entre os selecionados,
+SUM: retorna a soma de todos valores selecionados e distintos
+
+As funções de agregação podem ser usadas apenas com as seguintes cláusulas: SELECT / HAVING
+
+_________________________________________________________________________________________________________
+
+Aula 102 - Revisão
+
+
+
+
+
+
