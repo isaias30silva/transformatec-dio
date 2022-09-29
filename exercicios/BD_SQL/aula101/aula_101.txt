@@ -1,0 +1,28 @@
+AULA 101 - Criando Queries em SQL
+
+Queries - instruções para interação com os dados registrados em tabelas de banco de dados.
+
+Cláusulas do SELECT:
+WHERE - filtrar registros por uma condição,
+DISTINCT - selecionar registros sem repetições,
+ORDER BY - ordenar registros (pode ser ascendente ou descendente),
+LIMIT/FETCH - obter um subconjunto de registros,
+GROUP BY - agrupar registros com base em uma coluna,
+HAVING - utilizado junto com o Group BY, define uma condição para agrupar os itens,
+JOINS - combinar colunas com valores correspondentes entre tabelas,
+UNION/INTERSECT/EXCEPT - operações matemáticas de conjuntos
+
+Funções de agregação
+realizm um cálculo sobre uma série de linhas (registros) e retornam apenas uma simples linha.
+atuam como um espécie de reducer.
+
+AVG: retorna um valor médio entre os selecionados,
+COUNT: retorna a quantidade de valores selecionados,
+MAX: retorna o valor máximo entre os selecionados,
+MIN: retorna o valor mínimo entre os selecionados,
+SUM: retorna a soma de todos valores selecionados e distintos
+
+As funções de agregação podem ser usadas apenas com as seguintes cláusulas: SELECT / HAVING
+
+
+Exercícios no ElephantSQL 
