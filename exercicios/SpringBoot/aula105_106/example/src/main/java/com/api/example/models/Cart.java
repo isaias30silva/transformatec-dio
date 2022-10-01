@@ -6,6 +6,19 @@ import java.util.List;
 public class Cart {
     
     private List<Product> items = new ArrayList<Product>();
+    private int id;
+
+    public Cart(int id){
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void insertProduct(Product product) {
         items.add(product);
