@@ -24,19 +24,19 @@ Repositório de exercícios e desafios do Transforma Tec - 2022
 >
 > :one: Módulo Zero - Onboarding
 >
-> :two: Módulo I - Fundamentos
+> :two: [Módulo I - Fundamentos](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/HTML)
 >
-> :three: Módulo II - HTML e CSS
+> :three: [Módulo II - HTML e CSS](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/HTML%20CSS)
 >
-> :four: Módulo III - JavaScript
+> :four: [Módulo III - JavaScript](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/JavaScript)
 >
-> :five: Módulo IV - React JS
+> :five: [Módulo IV - React JS](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/ReactJS)
 >
-> :six: Módulo V - Java
+> :six: [Módulo V - Java](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/Java)
 >
-> :seven: Módulo VI - Banco de Dados SQL
+> :seven: [Módulo VI - Banco de Dados SQL](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/BD_SQL)
 >
-> :eight: Módulo VII - Spring Boot
+> :eight: [Módulo VII - Spring Boot](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/SpringBoot)
 >
 > :nine: Módulo VIII - Projeto FullStack: React + Spring Boot
 >
