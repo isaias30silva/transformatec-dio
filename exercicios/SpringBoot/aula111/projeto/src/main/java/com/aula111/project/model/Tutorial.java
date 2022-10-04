@@ -64,5 +64,13 @@ public class Tutorial {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public Boolean getPublished() {
+        return published;
+    }
+
+    public void setPublished(Boolean published) {
+        this.published = published;
+    }
     
 }

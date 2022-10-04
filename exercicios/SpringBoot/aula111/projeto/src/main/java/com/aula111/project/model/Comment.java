@@ -13,7 +13,8 @@ import javax.persistence.Table;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import net.bytebuddy.utility.privilege.SetAccessibleAction;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 @Table(name = "tb_comment")
@@ -28,8 +29,9 @@ public class Comment {
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "t_id", nullable = false)
+    @JoinColumn(name = "c_tid", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnore
     private Tutorial tutorial;
 
     public Comment() {
