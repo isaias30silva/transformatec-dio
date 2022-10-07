@@ -1,0 +1,362 @@
+SPRING BOOT
+
+Spring
+é uma plataforma com diversos recursos para construção de aplicativos Java, 
+facilitando assim o desenvolvimento em Java EE com módulos que facilitam a
+construção de softwares reduzindo o tempo de desenvolvimento.
+
+Beans
+um objeto que é instanciado, montado e gerenciado por um container do Spring
+através de Inversão de Controle (IoC) e Injeção de Dependências (DI)
+
+_____________________________________________________________________________________
+
+Aula 103 - Por que Spring Boot
+
+
+Classes Java -> Packages -> Framework -> Ecossistema
+Spring = Ecossistema
+Spring Boot = Framework
+
+Back-end: trata da parte de "trás" da aplicação. A parte lógica, o que não se vê da aplicação. 
+Trata da implementação da regra de negócio de um sistema. Servidor
+
+As tecnologias back-end são uma combinação de: aplicações(API), servidores(hospedagem) e banco de dados(armazenamento)
+
+Framework:
+pode ser definido como uma coleção de classes abstratas, objetos e padrões dedicados a resolver
+determinados problemas em uma arquitetura flexível e extensível. Permitem a reutilização de códigos
+com poucas alterações, otimizando o tempo e energia destinados aos projetos.
+
+Spring (características)
+ampla utilização, flexível, produtividade, rapidez, segurança, suporte.
+
+Módulos do Spring:
+Spring Boot = Criação de APPs
+Spring Framework
+Spring Data
+Spring MVC
+Spring Security
+
+Spring Boot: é uma ferramenta para facilitar a configuração e publicação das aplicações
+reduzindo a quantidade de configurações iniciais de projetos Java.
+
+Spring Framework: é uma ferramenta baseada em padrões de projeto com recursos para controle
+de injeção e inversão de dependências, acesso a dados, entre outros.
+
+Spring Data: fornece um modelo de programação baseado em Spring para acesso a dados de maneira
+simplificada com recursos para bancos de dados relacionais e não-relacionais.
+
+Spring MVC: é um módulo do Spring para criar aplicações web de maneira fácil, simples e elegante, 
+tornando-as robustas e flexíveis, se baseando no padrão MVC(Model View Controller).
+
+Spring Security: é uma estrutura de autenticação e autorização altamente personalizável para
+proteção de aplicações baseados em Spring Framework.
+
+As anotações vão sobre as classes e métodos. Estão presentes nos pacotes:
+org.springframework.boot.autoconfigure e .condition
+
+Spring Initizalizr
+gera um projeto base com as regras do projeto, onde o desenvolvedor informa dados como a versão 
+do Spring Boot, GrupID, ArtifactID e etc.
+
+_______________________________________________________________________________________________
+
+Aula 104 - Entendendo os conceitos de Inversão de controle e Injeção de dependência
+
+Inversão de controle
+transfere o controle de objetos ou partes de um programa para um contêiner ou estrutura.
+
+_______________________________________________________________________________________________
+
+Aula 105 - Criando sua primeira API Rest com Spring - Expondo os Endpoints
+
+Endpoints - pontos de acesso
+
+Segundo a definição da Red Hat, API significa "Interface de Programação de Aplicações" do inglês
+Application Programming Interface.
+Uma API pode ser considerada um conjunto de definições e protocolos para criar e integrar softwares de aplicações.
+
+Interface - ponto de contato
+
+________________________________________________________________________________________________
+
+Aula 106 - Criando sua primeira API REST com Spring - Documentando com Swagger
+
+Swagger- trabalhar com a documentação da API.
+A documentação descreve uma API. Mostra os Endpoints, dados, permissões e outros parâmetros
+necessários para construir a Request.
+O foco da documentação é mostrar com a API gera Request.
+
+O Swagger é uma aplicação open source que auxilia desenvolvedores nos processos de definir, 
+criar, documentar e consumir APIs REST
+
+API REST é aquela que tem POST, GET, PUT, DELETE e outros métodos(verbos).
+
+Swagger visa padronizar a integração, descrevendo os recursos que uma API deve possuir, como
+endpoints, dados recebidos, dados retornados, códigos HTTP e métodos de autenticação, entre outros.
+
+___________________________________________________________________________________________________
+
+Aula 107 - Revisão, dúvidas e resolução de exercícios
+
+___________________________________________________________________________________________________
+
+Aula 108 - Conectando seu projeto Spring Boot com Banco de Dados
+
+Persistência: significa salvar um objeto dentro do banco de dados
+
+O que é um banco de dados: é a organização e armazenagem de informações sobre um domínio específico.
+
+Um banco de dados é responsável pela camada de persistência dos dados em um sistema.
+
+Banco de dados relacional: é um mecanismo de armazenamento de dados em tabelas, que possuem
+relacionamentos entre si.
+
+O Spring Data é o modelo de programação dentro do Spring Framework para acesso e manipulação de dados.
+O Spring Data é responsável pela implementação dos repositórios (Camada de persistência de dados) com 
+métodos de acesso a banco de dados.
+
+Entidade ou tabela: é onde todas as informações inseridas em um banco de dados relacional são armazenadas.
+É uma estrutura formada por linhas e colunas onde cada linha consiste de, pelo menos, uma ou várias colunas.
+
+Classe de Entidade: classe do tipo Bean com referência a uma entidade do banco de dados, e cada
+instância desta entidade representa uma linha (registro ou tupla) na tabela (entidade).
+
+JPA
+O Java Persistence API(JPA) permite a implementação do mapeamento objeto-relacional de um modelo de dados. 
+
+ORM
+O mapeamento objeto-relacional(ORM ou MOR) serve para converter dados entre bancos relacionais e linguagens
+orientadas a objeto, como é o caso do PHP, C++, Java, Python, Ruby entre outras.
+O seu propósito, basicamente, prover uma camada de persistência transparente entre aplicação orientada a objeto
+e o mecanismo de persistência relacional.
+
+O Spring Data junto com o Spring Boot permite a configuração da aplicação e a disponibilização de dados 
+para uma API Rest.
+
+H2 Database
+H2 é um banco de dados relacional escrito em Java que pode ser integrado em aplicativos Java ou executado no 
+modo cliente-servidor. É um banco de dados para Teste.
+
+________________________________________________________________________________________________________
+
+Aula 109 - Mapeando as suas Entidades com JPA/Hibernate
+
+Hibernate é um framework.
+O Hibernate é uma ferramenta de mapeamento objeto-relacional(ou ORM) para Java, transformando os
+dados da estrutura lógica de um banco de dados em objetos relacionais.
+
+Apesar das linguagens de programação trabalharem com POO, a maioria dosSGBDs é baseada no modelo
+relacional, com tabelas ao invés de objetos.
+
+JPA
+O Java Persistence API(JPA) é uma API padrão da linguagem Java que descreve uma interface comum
+para frameworks de persistência de dados.
+Basicamente, o JPA converte classes em tabelas
+_________________________________________________________________________________________________
+
+Aula 110 - Implementando o padrão Repository
+
+A interface central na abstração do repositório Spring Data é o Repository.
+Essa interface atua principalmente para capturar os tipos de dados.
+
+A diferença entre padrões de projeto e funções e bibliotecas é que os padrões não podem ser copiados,
+pois são um conceito e não códigos escritos.
+
+O CrudRepository fornece funcionalidades CRUD sofisticadas para a classe de entidade que está sendo
+gerenciada.
+
+O padrão Repository fornece um conjunto de métodos para ler, persistir, atualizar e remover uma 
+entidade do armazenamento de dados subjacente.
+
+O padrão Repository é bem simples, onde uma interface define o repositório com todas as operações 
+lógicas de leitura e gravação para uma entidade específica.
+
+A interface é implementada por uma ou mais classes que implementam o armazenamento de dados de cada
+método de interface.
+____________________________________________________________________________________________________
+
+Aula 111 - Testando nossa API com o Postman/Insomnia
+
+As classes da entidade, as tabelas relacionais, possuem os seguintes relacionamentos:
+
+@OneToOne: um para um;
+@ManyToOne: muitos para um;
+@OneToMany: um para muitos;
+@ManyToMany: muitos para muitos.
+
+FetchType
+Trata da forma de carregamento dos dados do banco de dados para os objetos de acordo com seu relacionamento:
+- Lazy: os objetos não são carregados do banco até que sejam chamados;
+- Eager: carrega os objetos com os dados do banco, mesmo que não sejam utilizados de imediato.
+_______________________________________________________________________________________________________
+
+Aula 112 - Revisão, Dúvidas e Resolução de Exercícios
+
+_______________________________________________________________________________________________________
+
+Aula 113 - Conhecendo os mecanismos de Autenticação/Autorização
+
+- Quando vamos desenvolver um software, temos que partir do princípio da segurança, pensando nas possíveis falhas.
+- Todo software pode ser corrompido ou invadido.
+
+- Para controlar o acesso de usuários e evitar acessos indesejados, são utilizados métodos de autenticação e 
+autorização de usuários em aplicações.
+
+- Autenticação: verifica a identidade digital do usuário, ou seja, o usuário prova de fato quem ele é.
+Tipos de autenticação:
+- Usuário e senha
+- Biometria
+- Dois fatores (2FA e MFA)
+- Sessão
+- Token
+
+- Autorização: ou permissões do usuário dentro de um sistema.
+Serve para verificar se determinado usuário terá a permissão para utilizar, executar recursos ou manipular
+determinadas ações.
+_________________________________________________________________________________________________________
+
+Aula 114 - Introdução ao Spring Security: Liberando e desabilitando acesso aos Endpoints
+
+Basic Auth = login+senha
+
+Na autenticação na memória, são passados os detalhes do usuário, como roles, senhas e nome de usuário.
+Esse método é mais utilizado no início do desenvolvimento e não em produção, onde se utiliza mais o 
+JDBC e JPA.
+A autenticação em memória pode ser realizada enquanto o servidor Spring está em execução, caso contrário
+não será possível.
+
+Autenticação em memória = sem persistência de objetos
+
+Para configurar a autenticação no Spring Security é utilizado o AuthenticationManager usando construtor da
+classe AuthenticationManagerBuilder
+
+O AuthenticationManagerBuilder deve estender a classe WebSecurityConfigurerAdapter e, em seguida,
+sobrescrever o seu método configure() que recebe o AuthenticationManagerBuilder como parâmetro.
+
+Autenticação = validação de identidade do usuário
+
+Autorização
+Para autorização(permissões) é necessário sobrescrever o método configure() com um objeto da classe
+HttpSecurity
+
+Override=Sobreescrita (significa modificar o corpo do método, mantendo a assinatura, ou seja, os parâmetros)
+
+Autenticação em memória
+O método inMemoryAuthentication() da classe AuthenticationManagerBuilder é usado para realizar
+a autenticação na memória no Spring Security.
+
+A classe inMemoryUserDetailsManager fornece gerenciamento de objeto da classe UserDetails,
+implementando a interface UserDetailsManager.
+
+_______________________________________________________________________________________________________________
+
+Aula 115 - Configurando o Basic Auth com o banco de dados
+
+Autenticação em Banco de Dados
+Frameworks ORM, como o Hibernate, fornecem ferramentas para a manipulação de banco de dados em Java
+por meio da abstração, manipulando tabelas do banco de dados com classes Java.
+
+O JPA Persistence API(JPA) é uma API padrão da linguagem Java que descreve uma interface comum
+para frameworks de persistência de dados. Assim, as informações dos usuários são persistidas, não
+se perdendo após o fim da execução da aplicação.
+
+JWT(JSON Web Token) é um método RCT 7519 padrão da indústria para realizar autenticação entre duas
+partes por meio de um token assinado que autentica uma requisição web.
+
+Token JWT
+Esse Token é um código em Base 64 que armazena objetos JSON com os dados que permitem a autenticação
+da requisição.
+
+_______________________________________________________________________________________________________
+
+Aula 116 - Configurando o Basic Auth com o banco de dados
+
+A assinatura de um JSON Web Token é seu componente mais sensível por tratar justamente da 
+segurança deste token.
+
+Cookies
+Um cookie HTTP(cookie da web, cookie do navegador) é um pequeno pedaço de dados que um 
+servidor envia ao navegador da web de um usuário.
+O navegador pode armazenar o cookie e enviá-lo de volta ao mesmo servidor com solicitações posteriores.
+Normalmente, um cookie HTTP é usado para informar se duas solicitações vêm do mesmo navegador, mantendo
+um usuário conectado, por exemplo.
+Os cookies permitem que os sites reconheçam os usuários e lembrem de suas informações e preferências de login
+individuais, como notícias esportivas em vez de política.
+
+Ideia de cookies = pacotes de informações que são enviados e recebidos sem alterações.
+
+Uso de cookies - Autenticação / Rastreamento
+controlam se o usuário está conectado e qual conta ele está usando, além de também simplificar as 
+informações de login.
+rastreiam as várias visitas de um usuário ao mesmo site ao longo do tempo.
+
+___________________________________________________________________________________________________________
+
+Aula 117 - Revisão, dúvidas e Resolução de exercícios
+
+___________________________________________________________________________________________________________
+
+Aula 118 - Consumindo a API do ViaCEP: Conhecendo o Open Feign
+
+Normalmente, no Spring se utiliza o RestTemplate, uma classe para desenvolver aplicações que consomem
+serviços de API's Rest.
+
+O Spring Cloud OpenFeign é um cliente Rest declarativo para facilitar o desenvolvimento de aplicações
+web e suporta anotações do Spring MVC e JAX-RS
+
+JAX-RS API é uma especificação que define interfaces e anotações utilizadas na criação de uma API RESTful.
+
+O OpenFeign abstrai toda a complexidade de implementar requisições a outras API's, deixando para o
+programador apenas a tarefa de configurar estas requests.
+
+OpenFeign - utilizado para comunicação entre API's.
+
+____________________________________________________________________________________________________________
+
+Aula 119 - Consumindo a API do ViaCEP: Configurando Spring para consumo de API
+
+ViaCEP
+É um webservice gratuito para a consulta de CEP brasileiros.
+
+_____________________________________________________________________________________________________________
+
+Aula 120 - Consumindo a API do ViaCEP: Evoluindo a camada de negócio
+
+_____________________________________________________________________________________________________________
+
+Aula 121 - Consumindo a API do ViaCEP: Finalizando o projeto base da API Rest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
