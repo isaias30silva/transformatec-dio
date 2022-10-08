@@ -1,5 +1,7 @@
 package com.aula124.project.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,38 +10,32 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
-@Table(name = "contacts")
-public class Contact {
+@Table(name = "groups")
+public class Group {
 
     @Id
     @Column(name = "id", columnDefinition = "INTEGER")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
-    @Size(min = 3, max = 100)
-    @Column(name = "name", columnDefinition = "TEXT", length = 255, nullable = false)
+    @Column(name = "name", length = 255)
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "u_id", nullable = false)
+    @JoinColumn(name = "u_id")
     @OnDelete(action = OnDeleteAction.CASCADE)
     private User user;
 
-    public Contact() {
+    public Group() {
     }
 
-    public Contact(Long id, String name, User user) {
-        this.id = id;
+    public Group(String name, List<Contact> contacts) {
         this.name = name;
-        this.user = user;
     }
 
     public Long getId() {
@@ -65,5 +61,5 @@ public class Contact {
     public void setUser(User user) {
         this.user = user;
     }
-    
+
 }
