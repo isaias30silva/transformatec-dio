@@ -2,15 +2,22 @@ package com.aula124.project.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "users")
 public class User {
 
     @Id
-    @Column(name = "id", columnDefinition = "INTEGER", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    @NotBlank
+    @Size(max = 20)
     private Long id;
 
     @Column(name = "username", columnDefinition = "TEXT", nullable = false, unique = true, length = 255)
@@ -61,8 +68,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    
+    }    
     
 }

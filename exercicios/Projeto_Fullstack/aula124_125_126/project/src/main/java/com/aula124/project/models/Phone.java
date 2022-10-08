@@ -5,7 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 @Table(name = "phones")
@@ -23,6 +28,11 @@ public class Phone {
 
     @Column(name = "pnumber", nullable = false)
     private String phoneNumber;
+
+    @ManyToOne
+    @JoinColumn(name = "c_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Contact contact;
 
     public Phone() {
     }
@@ -65,6 +75,13 @@ public class Phone {
         this.phoneNumber = phoneNumber;
     }
 
+    public Contact getContact() {
+        return contact;
+    }
+
+    public void setContact(Contact contact) {
+        this.contact = contact;
+    }
     
     
 }

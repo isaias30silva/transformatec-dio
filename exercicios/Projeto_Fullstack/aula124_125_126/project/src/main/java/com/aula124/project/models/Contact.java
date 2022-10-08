@@ -34,14 +34,6 @@ public class Contact {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private User user;
 
-    @OneToMany(targetEntity = Phone.class , fetch = FetchType.LAZY)
-    @JoinColumn(name="c_id")
-    private List<Phone> phoneNumbers = new ArrayList<Phone>();
-
-    @Column(name = "emails", columnDefinition = "TEXT")
-    private String[] emails;
-
-
     public Contact() {
     }
 
@@ -55,20 +47,24 @@ public class Contact {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public User getUser() {
         return user;
     }
-    
-    public String[] getEmails() {
-        return emails;
-    }
 
-    public void setEmails(String[] emails) {
-        this.emails = emails;
+    public void setUser(User user) {
+        this.user = user;
     }
     
 }
