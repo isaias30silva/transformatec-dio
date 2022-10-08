@@ -13,11 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.aula124.project.models.Contact;
-import com.aula124.project.models.Phone;
 import com.aula124.project.models.User;
 import com.aula124.project.repositories.ContactRepository;
 import com.aula124.project.repositories.PhoneRepository;
 import com.aula124.project.repositories.UserRepository;
+
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/api")
@@ -33,8 +36,15 @@ public class ContactController {
     @Autowired
     UserRepository userRepository;
 
-    @PostMapping("/users/{id}/contacts")
     //localhost:8080/api/users/1/contacts
+    @PostMapping("/users/{id}/contacts")
+
+    //Criando documentação com o Swagger
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "OK"),
+        @ApiResponse(code = 500, message = "Internal Server Error")
+    })
+    @ApiOperation(value = "Criando um novo contato", consumes = "application/json", produces = "application/json")
     public ResponseEntity<Contact> createContact(
         @PathVariable("id") long id,
         @RequestBody Contact contact
@@ -51,8 +61,14 @@ public class ContactController {
         return new ResponseEntity<Contact>(_contact, HttpStatus.CREATED);
     }
 
-    @GetMapping("/users/{id}/contacts")
     //localhost:8080/api/users/1/contacts
+    @GetMapping("/users/{id}/contacts")
+
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "OK"),
+        @ApiResponse(code = 500, message = "Internal Server Error")
+    })
+    @ApiOperation(value = "Buscando lista de contatos por id de usuário", produces = "application/json")
     public ResponseEntity<List<Contact>> getByUser(@PathVariable("id") long id) {
 
         List<Contact> _contacts = contactRepository.findByUser(id);

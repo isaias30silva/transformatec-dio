@@ -16,6 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.aula124.project.models.User;
 import com.aula124.project.repositories.UserRepository;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 @RequestMapping("/api")
 //localhost:8080/api/...
@@ -23,18 +27,36 @@ public class UserController {
 
     @Autowired
     UserRepository userRepository;
-    
-    @PostMapping("/users")
+
+    //Criação de usuário
+
     //localhost:8080/api/users - POST
+    @PostMapping("/users")
+
+
+    //Documentação do Swagger
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "OK"),
+        @ApiResponse(code = 201, message = "OK"),
+        @ApiResponse(code = 500, message = "Internal Server Error")
+    })
+    @ApiOperation(value = "Criando novo usuário", consumes = "application/json", produces = "application/json")
     public ResponseEntity<User> createUser(@RequestBody User user) {
 
         User _user = userRepository.save(user);
 
-        return new ResponseEntity<User>(_user, HttpStatus.CREATED);
+        return new ResponseEntity<User>(_user, HttpStatus.OK);
     }
 
-    @GetMapping("/users")
+    //Busca de usuário
+
     //localhost:8080/api/users/?usernae=isaias - GET
+    @GetMapping("/users")
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "OK"),
+        @ApiResponse(code = 500, message = "Internal Server Error")
+    })
+    @ApiOperation(value = "Buscando usuários por nome", produces = "application/json")
     public ResponseEntity<List<User>> findByName(@RequestParam String username) {
 
         List<User> _users = userRepository.findByUsername(username);
@@ -46,8 +68,16 @@ public class UserController {
         return new ResponseEntity<List<User>>(_users, HttpStatus.CREATED);
     }
 
-    @GetMapping("/users/{id}")
+    //Busca por um único usuário
+
     //localhost:8080/api/users/1 - GET
+    @GetMapping("/users/{id}")
+
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "OK"),
+        @ApiResponse(code = 500, message = "Internal Server Error")
+    })
+    @ApiOperation(value = "Buscando um usuário por id", produces = "application/json")
     public ResponseEntity<User> getById(@PathVariable("id") long id) {
 
         User _users = userRepository.findById(id);

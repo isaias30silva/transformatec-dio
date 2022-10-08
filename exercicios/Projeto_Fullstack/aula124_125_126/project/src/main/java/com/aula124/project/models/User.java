@@ -6,7 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -16,16 +18,22 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    @NotBlank
-    @Size(max = 20)
     private Long id;
 
-    @Column(name = "username", columnDefinition = "TEXT", nullable = false, unique = true, length = 255)
+    @NotBlank
+    @Size(min = 5, max = 20)
+    @Column(name = "username", columnDefinition = "TEXT", nullable = false, unique = true, length = 20)
     private String username;
 
+    @NotBlank
+    @Size(max = 50)
+    @Email
     @Column(name = "email", columnDefinition = "TEXT", nullable = false, unique = true, length = 255)
     private String email;
 
+    @NotBlank
+    @Size(min = 8, max = 20)
+    @Pattern(regexp = "^[a-zA-Z0-9_.-]*$")
     @Column(name = "password", columnDefinition = "TEXT", nullable = false, length = 255)
     private String password;
 

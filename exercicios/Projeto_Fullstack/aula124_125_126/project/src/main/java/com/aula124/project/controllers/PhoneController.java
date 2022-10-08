@@ -17,6 +17,10 @@ import com.aula124.project.models.Phone;
 import com.aula124.project.repositories.ContactRepository;
 import com.aula124.project.repositories.PhoneRepository;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 @RequestMapping("/api")
 public class PhoneController {
@@ -27,9 +31,17 @@ public class PhoneController {
     @Autowired
     ContactRepository contactRepository;
     
-    @PostMapping("/contacts/{id}/phones")
     //localhost:8080/api/contacts/1/phones
-    public ResponseEntity<Contact> addPhoneNumber(
+    @PostMapping("/contacts/{id}/phones")
+
+    //Criando documentação com o Swagger
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "OK"),
+        @ApiResponse(code = 201, message = "OK"),
+        @ApiResponse(code = 500, message = "Internal Server Error")
+    })
+    @ApiOperation(value = "Criando um novo telefone para um contato", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<Phone> addPhoneNumber(
         @PathVariable("id") long id,
         @RequestBody Phone phone
     ) {
@@ -43,8 +55,15 @@ public class PhoneController {
         return new ResponseEntity<Phone>(_phone, HttpStatus.CREATED);
     }
 
+    //localhost:8080/api/contacts/1/phones
     @GetMapping("/contacts/{id}/phones")
-        //localhost:8080/api/contacts/1/phones
+
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "OK"),
+        @ApiResponse(code = 201, message = "OK"),
+        @ApiResponse(code = 500, message = "Internal Server Error")
+    })
+    @ApiOperation(value = "Buscando lista de telefones de um contato", consumes = "application/json", produces = "application/json")
     public ResponseEntity<List<Phone>> getByContact(@PathVariable("id") long id) {
 
         List<Phone> _phones = phoneRepository.findByContact(id);
