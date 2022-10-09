@@ -20,6 +20,8 @@ export default function ContactRegister() {
                 }),
             });
 
+            console.log(res)
+
             //let resJson = await res.json();
 
             if (res.status === 200 || res.status === 201) {
@@ -36,6 +38,7 @@ export default function ContactRegister() {
 
     return (
         <div>
+            <h3>Cadastro de contato</h3>
             <form onSubmit={handleSubmit}>
 
                 <input 
@@ -60,12 +63,10 @@ export default function ContactRegister() {
                 />
 
                 <button type="submit">
-                    Cadastrar contato
+                    Cadastrar
                 </button>
 
-                <div>
-                    {message ? <p>{message}</p> : null}
-                </div>
+                <div className="message">{message ? <p>{message}</p> : null}</div>
 
             </form>
         </div>

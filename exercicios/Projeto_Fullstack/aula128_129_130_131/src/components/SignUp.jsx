@@ -45,6 +45,7 @@ export default function SignUP() {
 
     return (
         <div>
+            <h3>Cadastro</h3>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
