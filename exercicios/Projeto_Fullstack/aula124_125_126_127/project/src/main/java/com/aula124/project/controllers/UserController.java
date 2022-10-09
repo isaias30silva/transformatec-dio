@@ -52,7 +52,7 @@ public class UserController {
 
     //Busca de usuário
 
-    //localhost:8080/api/users/?usernae=isaias - GET
+    //localhost:8080/api/users/?username=isaias - GET
     @GetMapping("/users")
     @ApiResponses({
         @ApiResponse(code = 200, message = "OK"),

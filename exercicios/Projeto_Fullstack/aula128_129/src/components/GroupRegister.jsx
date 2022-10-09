@@ -1,18 +1,18 @@
 import { useState } from "react";
 
-export default function ContactRegister() {
+export default function GroupRegister() {
 
     const [name, setName] = useState("");
     const [userId, setUserId] = useState("");
-    const [groupId, setGroupId] = useState("");
     const [message, setMessage] = useState("");
 
     let handleSubmit = async (e) => {
+
         e.preventDefault();
 
         try {
 
-            let result = await fetch("", {
+            let result = await fetch('http://localhost:8080/api/user/' + userId + '/groups', {
                 method: "POST",
                 headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify ({
@@ -20,17 +20,18 @@ export default function ContactRegister() {
                 }),
             });
 
-            let JSONResult = await result.json();
-
             if (result.status === 200 || result.status === 201) {
                 setName("");
-                setMessage("Contato criado com sucesso");
+                setUserId("");
+                setMessage("Grupo criado com sucesso");
             } else {
+                console.log(result);
                 setMessage("Falha ao executar a operação");
             }
 
         } catch (error) {
-            setMessage(error.message)
+            console.log(error.message);
+            setMessage(error.message);
         }
     }
 
@@ -40,34 +41,26 @@ export default function ContactRegister() {
 
                 <input 
                     type="text"
-                    value={name}
-                    placeholder={"Nome do contato"}
-                    onChange={(e) => setName(e.target.value)}
-                />
-
-                <input 
-                    type="number"
-                    value={groupId}
-                    placeholder={"Id do grupo"}
-                    onChange={(e) => setGroupId(e.target.value)}
-                />
-
-                <input 
-                    type="number"
                     value={userId}
-                    placeholder={"Id do usuário"}
+                    placeholder="Id do usuário"
                     onChange={(e) => setUserId(e.target.value)}
                 />
 
+                <input 
+                    type="text"
+                    value={name}
+                    placeholder={"Nome do grupo"}
+                    onChange={(e) => setName(e.target.value)}
+                />
+
                 <button type="submit">
-                    Cadastrar contato
+                    Cadastrar grupo
                 </button>
 
-                <div>
-                    {message ? <p>{message}</p> : null}
-                </div>
+                <div className="message">{message ? <p>{message}</p> : null} </div>
 
             </form>
         </div>
+
     )
 }

@@ -53,7 +53,7 @@ public class ContactController {
         @ApiResponse(code = 500, message = "Internal Server Error")
     })
     @ApiOperation(value = "Criando um novo contato", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<Contact> createContact(
+    public ResponseEntity<?> createContact(
         @PathVariable("id") long id,
         @RequestParam long gId,
         @RequestBody Contact contact
@@ -72,7 +72,7 @@ public class ContactController {
         //Salvando um novo contato
         Contact _contact = contactRepository.save(contact);
 
-        return new ResponseEntity<Contact>(_contact, HttpStatus.CREATED);
+        return new ResponseEntity<>(_contact, HttpStatus.CREATED);
     }
 
     //localhost:8080/api/users/1/contacts

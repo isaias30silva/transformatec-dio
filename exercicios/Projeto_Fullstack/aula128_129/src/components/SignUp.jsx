@@ -14,32 +14,33 @@ export default function SignUP() {
         try {
 
             //realizando uma requisição ao servidor da API
-            let result = await fetch("http://localhost:8080/api/users", {
+            let res = await fetch("http://localhost:8080/api/users", {
                 method: "POST", 
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({username: username, email: email, password: password
             }),
             });
 
-            let JSONResult = await result.json();
+            //manipulando o resultado da request
+            let jsonRes = await res.json();
 
-            if (result.status === 200 || result.status === 201) {
+            if (res.status === 200 || res.status === 201) {
 
                 setEmail("");
                 setUsername("");
                 setPassword("");
                 setMessage("Usuário registrado com sucesso");
-                console.log(JSONResult);
+                console.log(jsonRes);
             } else {
-                console.log(result);
+                console.log(res);
                 setMessage("Falha ao executar a operação");
-            };
+            }
 
         } catch (error) {
-
+            setMessage("Falha ao executar operação");
             console.log(error);
-            setMessage(error.message);
-        };
+
+        }
     };
 
     return (
@@ -48,7 +49,7 @@ export default function SignUP() {
                 <input 
                     type="text"
                     value={username}
-                    placeholder={"Username"}
+                    placeholder={"Nome"}
                     onChange={(e) => setUsername(e.target.value)}
                 />
 
@@ -67,7 +68,7 @@ export default function SignUP() {
                 />
 
                 <button type="submit">
-                    Cadastrar
+                    SignUp
                 </button>
 
                 <div>
