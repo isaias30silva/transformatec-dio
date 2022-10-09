@@ -2,38 +2,53 @@ import React from "react";
 
 import { Routes, Route, Link } from "react-router-dom";
 
-import SignIn from './SignIn';
-import SignUp from './SignUp';
-import Welcome from '.Welcome';
+import ContactList from "./ContactList";
+import ContactRegister from "./ContactRegister";
+import PhoneList from "./PhoneList";
+import PhoneRegister from "./PhoneRegister";
+
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
 
 export default function Home() {
     return (
         <div>
-            <header>
-                <Link to="/signup">
-                    Home
-                </Link>
+            <header className = "headerStyle">
 
-                <Link to="/signup">
+                <Link className = "linkStyle" to="/signup">
                     Cadastro
                 </Link>
 
-                <Link to="/signin">
+                <Link className = "linkStyle" to="/signin">
                     Acesso
                 </Link>
 
-                <Link to="/welcom">
-                    Bem-vindo!
+                <Link className = "linkStyle" to="/contacts/new">
+                    Novo contato
+                </Link>
+
+                <Link className = "linkStyle" to="/contacts">
+                    Lista de contatos
+                </Link>
+
+                <Link className = "linkStyle" to="/phones/new">
+                    Novo telefone
+                </Link>
+
+                <Link className = "linkStyle" to="/phones">
+                    Lista de telefones
                 </Link>
 
             </header>
 
             <main>
                 <Routes>
-                <Route path="/" element={<Home />} exact = "/"/>
                     <Route path="/signup" element={<SignUp />}/>
-                    <Route path="/signin" element={<SignIn/>}/>
-                    <Route path="/welcome" element={<Welcom/>}/>
+                    <Route path="/signin" element={<SignIn />}/>
+                    <Route path="/contacts/new" element={<ContactRegister/>}/>
+                    <Route path="/contacts" element={<ContactList />}/>
+                    <Route path="/phones/new" element={<PhoneRegister />}/>
+                    <Route path="/phones" element={<PhoneList />}/>
                 </Routes>
             </main>
 

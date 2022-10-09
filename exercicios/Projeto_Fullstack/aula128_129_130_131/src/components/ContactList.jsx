@@ -6,7 +6,12 @@ const ContactList = () => {
     const [contactList, setContactList] = useState([]);
     const [userId, setUserId] = useState(1);
 
-    const url = 'http://localhost:8080/api/users/' + userId + '/contacts';
+    const url = 'http://localhost:8080/api/users/' + userId + '/contacts'
+
+    const formStyle = {
+        display: 'flex',
+        flexDirection: 'column'
+    }
 
     useEffect(() => {
         fetch(url)
@@ -19,8 +24,10 @@ const ContactList = () => {
         )
     },[userId])
 
+    console.log(contactList)
+
     return(
-        <div>
+        <div style={formStyle}>
             <h3>Listagem de contatos por usuário</h3>
             <input
                 type="number"

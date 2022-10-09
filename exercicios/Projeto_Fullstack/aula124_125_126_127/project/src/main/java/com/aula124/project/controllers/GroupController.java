@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,6 +26,7 @@ import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class GroupController {
 
     @Autowired
@@ -36,13 +38,12 @@ public class GroupController {
     @Autowired
     UserRepository userRepository;
 
-    @PostMapping("/user/{userId}/groups")
-
     @ApiResponses({
         @ApiResponse(code = 200, message = "OK"),
         @ApiResponse(code = 201, message = "OK"),
         @ApiResponse(code = 500, message = "Internal Server Error")
     })
+    @PostMapping("/user/{userId}/groups")
     @ApiOperation(value = "Criando novo grupo", consumes = "application/json", produces = "application/json")
     public ResponseEntity<Group> createGroup(@RequestBody Group group, @PathVariable("userId") long userId) {
 
@@ -52,12 +53,11 @@ public class GroupController {
 
         Group _group = groupRepository.save(group);
 
-        return new ResponseEntity<Group>(_group, HttpStatus.CREATED);
+        return new ResponseEntity<>(_group, HttpStatus.CREATED);
 
     }
 
     @GetMapping("/groups/{id}")
-
     @ApiOperation(value = "Listando contatos de grupo", produces = "application/json")
     public ResponseEntity<List<Contact>> getByGroup(@PathVariable("id") long id) {
 

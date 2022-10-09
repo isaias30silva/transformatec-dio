@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddButton from "./AddButton";
 
 export default function PhoneRegister() {
 
@@ -7,6 +8,11 @@ export default function PhoneRegister() {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [contactId, setContactId] = useState("");
     const [message, setMessage] = useState("");
+
+    const formStyle = {
+        display: 'flex',
+        flexDirection: 'column'
+    }
 
     let handleSubmit = async (e) => {
 
@@ -42,7 +48,7 @@ export default function PhoneRegister() {
     return (
         <div>
             <h3>Registro de Telefone</h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={formStyle}>
 
                 <input 
                     type="number"
@@ -62,19 +68,17 @@ export default function PhoneRegister() {
                     type="number"
                     value={phoneNumber}
                     placeholder={"Telefone"}
-                    onChange={(e) => phoneNumber(e.target.value)}
+                    onChange={(e) => setPhoneNumber(e.target.value)}
                 />
 
                 <input 
                     type="number"
                     value={contactId}
                     placeholder={"Id do contato"}
-                    onChange={(e) => contactId(e.target.value)}
+                    onChange={(e) => setContactId(e.target.value)}
                 />      
 
-                <button type="submit">
-                    Cadastrar telefone
-                </button>
+                <AddButton>Cadastrar telefone</AddButton>
 
                 <div className="message">{message ? <p>{message}</p> : null}</div>
 

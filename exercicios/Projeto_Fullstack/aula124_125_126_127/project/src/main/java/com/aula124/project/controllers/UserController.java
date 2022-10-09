@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,6 +24,7 @@ import io.swagger.annotations.ApiResponses;
 @RestController
 @RequestMapping("/api")
 //localhost:8080/api/...
+@CrossOrigin(origins = "*")
 public class UserController {
 
     @Autowired
@@ -65,13 +67,13 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
-        return new ResponseEntity<List<User>>(_users, HttpStatus.CREATED);
+        return new ResponseEntity<List<User>>(_users, HttpStatus.OK);
     }
 
     //Busca por um único usuário
 
     //localhost:8080/api/users/1 - GET
-    @GetMapping("/users/{id}")
+    @GetMapping("users/{id}")
 
     @ApiResponses({
         @ApiResponse(code = 200, message = "OK"),

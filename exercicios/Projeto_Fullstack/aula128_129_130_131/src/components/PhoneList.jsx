@@ -37,7 +37,7 @@ const PhoneList = () => {
                             <Phone
                                 ddd={phone.ddd}
                                 ddi={phone.ddi}
-                                pnumber={phone.phonNumber}
+                                pnumber={phone.phoneNumber}
                             />
                         )
                     }

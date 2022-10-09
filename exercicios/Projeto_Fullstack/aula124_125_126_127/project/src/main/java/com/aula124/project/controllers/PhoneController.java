@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,6 +24,7 @@ import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class PhoneController {
 
     @Autowired
@@ -56,14 +58,13 @@ public class PhoneController {
     }
 
     //localhost:8080/api/contacts/1/phones
-    @GetMapping("/contacts/{id}/phones")
-
     @ApiResponses({
         @ApiResponse(code = 200, message = "OK"),
         @ApiResponse(code = 201, message = "OK"),
         @ApiResponse(code = 500, message = "Internal Server Error")
     })
     @ApiOperation(value = "Buscando lista de telefones de um contato", consumes = "application/json", produces = "application/json")
+    @GetMapping("/contacts/{id}/phones")
     public ResponseEntity<List<Phone>> getByContact(@PathVariable("id") long id) {
 
         List<Phone> _phones = phoneRepository.findByContact(id);

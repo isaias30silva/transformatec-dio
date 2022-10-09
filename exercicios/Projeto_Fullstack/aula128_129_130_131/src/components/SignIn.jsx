@@ -1,6 +1,12 @@
 import { useState } from "react";
+import AddButton from "./AddButton";
 
 export default function SignIn() {
+
+    const formStyle = {
+        display: 'flex',
+        flexDirection: 'column'
+    }
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -16,7 +22,7 @@ export default function SignIn() {
     return (
         <div>
             <h3>Login</h3>
-            <form onSubmit={handleSignIn}>
+            <form onSubmit={handleSignIn} style={formStyle}>
 
                 <input 
                     type="text"
@@ -32,9 +38,7 @@ export default function SignIn() {
                     onChange={(e) => setPassword(e.target.value)}
                 />
 
-                <button type="submit">
-                    Login
-                </button>
+                <AddButton>Login</AddButton>
 
             </form>
         </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AddButton from "./AddButton";
 
 export default function ContactRegister() {
 
@@ -6,6 +7,11 @@ export default function ContactRegister() {
     const [userId, setUserId] = useState("");
     const [groupId, setGroupId] = useState("");
     const [message, setMessage] = useState("");
+
+    const formStyle = {
+        display: 'flex',
+        flexDirection: 'column'
+    }
 
     let handleSubmit = async (e) => {
         e.preventDefault();
@@ -39,7 +45,7 @@ export default function ContactRegister() {
     return (
         <div>
             <h3>Cadastro de contato</h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={formStyle}>
 
                 <input 
                     type="text"
@@ -62,9 +68,7 @@ export default function ContactRegister() {
                     onChange={(e) => setUserId(e.target.value)}
                 />
 
-                <button type="submit">
-                    Cadastrar
-                </button>
+                <AddButton>Cadastrar</AddButton>
 
                 <div className="message">{message ? <p>{message}</p> : null}</div>
 
