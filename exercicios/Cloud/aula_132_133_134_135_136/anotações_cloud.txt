@@ -119,6 +119,26 @@ conteúdo ao usuário final e reduzir a latência do acesso.
 
 O professor ensinou a como criar uma conta na AWS.
 
+____________________________________________________________________________________________________________
+
+Aula 135 - Conhecendo os serviços da AWS
+
+Categorias de serviços AWS
+
+-computação
+-armazenamento
+-banco de dados
+-redes e entrega de conteúdo
+-análises (analytics)
+-machine learning
+-segurança, identidade e conformidade
+
+____________________________________________________________________________________________________________
+
+Aula 136 - Revisão, Dúvidas e Resolução de Exercícios
+
+
+
 
 
 
