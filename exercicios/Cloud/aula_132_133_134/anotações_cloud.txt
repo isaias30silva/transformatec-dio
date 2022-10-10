@@ -92,6 +92,33 @@ Servidores em nuvem
 são baseados em datacenters com supercomputadores para atender demandas globais de processamento e
 armazenagem de dados.
 
+__________________________________________________________________________________________________________
+
+Aula 134 - Conhecendo os serviços da AWS
+
+30% do mercado global de cloud
+valor de mercado de 62 bilhões de dólares em 2021
+
+A AWS oferece um amplo conjunto de produtos globais baseados na nuvem, como computação, armazenamento, 
+bancos de dados, análise, redes, machine learning e IA, dispositivos móveis, ferramentas de desenvolvedor,
+IoT, segurança e aplicações empresariais e muito mais.
+
+Infraestrutura global
+-AWS regions,
+-AWS availability zones,
+-AWS data centers,
+-AWS edge locations/ points os presence
+
+AWS Avaliability zones
+uma zona de disponibilidade (AZ) é um ou mais datacenters distintos com energia, rede e conectividade
+redundantes em uma região da AWS.
+
+AWS Edge locations
+uma edge location é basicamente um pequeno servidor de cache e são usados especificamente para distribuir
+conteúdo ao usuário final e reduzir a latência do acesso.
+
+O professor ensinou a como criar uma conta na AWS.
+
 
 
 
