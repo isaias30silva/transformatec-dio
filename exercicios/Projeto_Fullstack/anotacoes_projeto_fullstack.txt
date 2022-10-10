@@ -1,0 +1,164 @@
+Módulo VIII - Projeto FullStack: React + Spring Boot
+
+Aula 123 - API Agenda de Contatos - Entendendo e Abstraindo Nosso Domínio de Aplicação.
+
+APIs
+As APIs surgiram nos primeiros dias da computação, muito antes do computador pessoal. Naquela época,
+elas eram normalmente usadas como bibliotecas para sistemas operacionais.
+Uma API permite que soluções e serviços se comuniquem, porém de forma desacoplada, atuando como um 
+contrato que determina como as solicitações/requisições devem ser formatadas.
+
+As APIs possuem alguns tipos de política de acesso:
+- privada
+- parceiros
+- pública
+
+A grande vantagem de usar API's é que permitem integrar novas funcionalidades a aplicações já existentes.
+
+Banco de Dados
+É responsável pela camada de persistência dos dados em um sistema.
+
+Banco de dados relacional é um mecanismo de armazenamento de dados em tabelas que possuem relacionamentos
+entre si.
+
+Java Persistence API(JPA)
+permite a implementação do mapeamento objeto-relacional de um modelo de dados.
+
+Mapeamento Objeto-Relacional(ORM)
+Tabela = Classe
+Coluna = atributos
+registro = Objeto
+
+Entidade ou tabela = é onde todas as informações inseridas em um banco de dados relacional são armazenadas.
+É uma estrutura formada por linhas e colunas onde cada linha consiste de, pelo menos, uma ou várias colunas.
+
+Spring Data
+É o modelo de programação dentro do Spring Framework para acesso e manipulação de dados
+É responsável pela implementação dos repositórios(camada de persistência de dados) com métodos de 
+acesso a banco de dados.
+
+Tem a função de manipular banco de dados relacionais: MySQL, PostgreSQL e NoSQL: MongoDB e Redis.
+
+_________________________________________________________________________________________________________
+
+Aula 124 - API Agenda de Contatos - Criando/Configurando nossa API REST com Spring Boot
+
+_________________________________________________________________________________________________________
+
+Aula 125 - API Agenda de Contatos = Modelando as Entidades e suas regras de negócio
+
+_________________________________________________________________________________________________________
+
+Aula 126 - API Agenda de Contatos = Validando os Endpoints e Documentando Nossa API REST
+
+_________________________________________________________________________________________________________
+
+Aula 127 - Revisão
+
+Spring Data - parte do banco de dados - JPA, Hibernate
+Spring Web - parte de API, endpoints
+Spring Validation - validação de atributos
+API
+Endpoints
+Banco de dados
+
+*Desenvolvimento Monolítico
+Como se todo o programa fosse um grande bloco
+
+*Microsserviços
+Como se cada serviço estivesse isolado, conversando entre eles por meio de APIs
+
+Integração
+refere-se a uma "atividade de desenvolvimento de software na qual componentes de software separados são
+combinados em um todo".
+
+__________________________________________________________________________________________________________
+
+Aula 128 - Frontend Agenda de Contatos - Criação da Página de Login/Registro
+
+Full Stack - completo/pilha = uma pilha completa, níveis de desenvolvimento - Frontend(cliente), Backend(api),
+Infraestrutura, servidor(nuvem)
+
+React - Framework do JavaScript
+ReactJS é uma biblioteca JavaScript para a criação de interfaces de usuário, criada em 2011 pelos desenvolvedores
+do Facebook.
+O React divide uma tela em diversos componentes tratados de forma individual para reaproveitar e padronizar 
+o código.
+
+Propriedades(props) - dados renderizados
+
+O state é um objeto que define pares de chave-valor associados às propriedades do componente.
+
+Para alterar um valor no objeto de estado, utiliza-se o método this.state() em componentes de classe.
+Para alterar valores de estados em componentes de função utiliza-se uma função tipo setState.
+
+Fetch
+A API fetch provê ao navegador uma interface para a execução de requisições HTTP através de Promises.
+
+React:
+
+Criando um projeto:
+npx create-react-app meu_site
+
+acessar:
+cd meu_site
+
+iniciar o projeto:
+yarn/npm start
+
+_____________________________________________________________________________________________________
+
+Aula 129 - Frontend Agenda de Contatos : Criação da Página de Listagem de Contatos
+
+Em ReactJS, os Hooks(ganchos) permitem o uso de state e outros recursos disponíveis apenas em 
+componentes de classes. Os hooks foram implementados na versão 16.8 do ReactJS.
+
+Hooks são funções para utilizar recursos de state e ciclo de vida no ReactJS em componentes funcionais.
+
+@CrossOrigin(origins = "*")
+______________________________________________________________________________________________________
+
+Aula 130 - Frontend Agenda de Contatos - Criação da Página de Detalhe de Contato(Links para Whatsapp e Maps)
+
+Rotas
+um site possui várias páginas dentro dele, como início, perfil, sobre, entre outras
+para navegar entre as páginas de uma aplicação ReactJS são necessárias rotas, onde cada uma dessas rotas
+representa uma tela.
+
+No ReactJS o React Router é utilizado para manter a URL atual e renderizar diferentes views(telas)
+conforme o usuário navega pelo site.
+
+BrowserRouter
+É um componente responsável por informar à aplicação ReactJS o roteamento de componentes, sendo um 
+elemento que envolverá os elementos <Route>
+
+Route
+componente que associa a rota ao componente. Possui três parâmetros: component, path e exact.
+
+Links
+é usado para criar links para diferentes rotas e a navegação nas páginas do aplicativo.
+basicamente substituem o href = "" do html
+
+Instalação do React Router
+
+npm install react-router-dom
+
+importar no projeto
+
+import { BrowserRouter, Route } from "react-router-dom"
+
+_____________________________________________________________________________________________________________
+
+Aula 131 - Frontend Agenda de Contatos- Validando as Funcionalidades e Responsividade
+
+Tipos de estilizações:
+- estilos inline
+- estilos em objetos
+- arquivo css
+- sass/scss
+- módulos css
+- css-in-js(Styled components)
+
+
+
+
