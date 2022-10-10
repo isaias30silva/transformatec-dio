@@ -1,0 +1,56 @@
+Aula 132 - Introdução à computação em nuvem
+
+AWS - provedor de nuvem
+
+Nuvem = computador de outra pessoa
+
+Após desenvolver uma aplicação, a fase seguinte é disponibilizá-la para o mundo na internet.
+Isso nos obriga a utilizar uma infraestrutura para deploy e manutenção.
+
+Deploy = disponibilização
+Manutenção = atualizar
+
+On-premise: servidores locais
+Cloud: servidores na internet
+
+Cloud: sob demanda- consumo de acordo com a necessidade
+
+A computação em nuvem é a entrega de recursos de TI sob demanda por meio da Internet com definição de
+preço de pagamento conforme o uso. (pay as you go - pague conforme seu gasto)
+
+server - vm(máquina virtual)
+storage - armazenamento de arquivos
+databse - armazenamento de dados
+
+Tipos de nuvem: privada, pública e híbrida
+
+Em vez de comprar, ter e manter datacenters e servidores físicos, pode-se acessar serviços de tecnologia, 
+como capacidade computacional, armazenamento e bancos de dados, conforme a necessidade, usando um 
+provedor de nuvem. 
+
+Três tipos de computação em nuvem
+-infraestrutura como serviço;
+-plataforma como serviço;
+-software como serviço;
+
+Cada tipo de computação em nuvem oferece diferentes níveis de controle, flexibilidade e gerenciamento para
+selecionar o conjunto certo de serviços para as suas necessidades. 
+
+Infraestrutura como serviço (IaaS)
+contém os componentes básicos da IT na nuvem como acesso a recursos de rede, computadores (virtuais ou em 
+hardware dedicado) e espaço de armazenamento de dados.
+
+Plataforma como serviço (PaaS)
+gerencia a infraestrutura(geralmente, hardware e sistemas operacionais) e permitindo ao dev manter o foco
+na implantação e no gerenciamento de aplicativos.
+
+Software como serviço (SaaS)
+oferece um produto completo, executado e gerenciado pelo provedor de serviços como aplicativos de usuários
+finais(e-mail, storage).
+
+A computação em nuvem vem com o objetivo de facilitar e diminuir o custo com o deploy e manutenção de aplicações
+na internet.
+
+
+
+

@@ -1,0 +1,18 @@
+Aula 132 - Introdução à computação em nuvem
+
+AWS - provedor de nuvem
+
+Nuvem = computador de outra pessoa
+
+Após desenvolver uma aplicação, a fase seguinte é disponibilizá-la para o mundo na internet.
+Isso nos obriga a utilizar uma infraestrutura para deploy e manutenção.
+
+Deploy = disponibilização
+Manutenção = atualizar
+
+On-premise: servidores locais
+Cloud: servidores na internet
+
+Cloud: sob demanda- consumo de acordo com a necessidade
+
+
