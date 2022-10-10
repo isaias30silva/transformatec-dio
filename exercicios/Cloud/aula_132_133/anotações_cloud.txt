@@ -51,6 +51,50 @@ finais(e-mail, storage).
 A computação em nuvem vem com o objetivo de facilitar e diminuir o custo com o deploy e manutenção de aplicações
 na internet.
 
+_______________________________________________________________________________________________________________
+
+Aula 133 - Panorama geral sobre servidores
+
+Servidor
+é um computador de grande capacidade de armazenamento e processamento para serem conectados a outros
+computadores através de uma rede.
+
+Os servidores processam e executam requisições dos usuários através de softwares, bancos de dados, emails, 
+envio de formulários, etc. 
+
+Um servidor de forma resumida é um computadore de grandes dimensões que executa operações em grande
+escala para clientes
+
+Tipos de servidores
+-email
+São responsáveis por gerenciar a distribuição de mensagens de e-mail. Utiliza protocolos como o SMTP, 
+POP e IMAP.
+
+-web
+São bastante comuns e servem para processar e executar aplicações que disponibilizam conteúdo na internet,
+como sites. utilizam protocolos como HTTP e HTTPS.
+
+-banco de dados
+são responsáveis por gerenciar o armazenamento e o fornecimento de dados para as aplicações.
+
+-proxy
+aumentam a eficiência e a segurança dos acessos à internet por usuários comuns. Atuam como filtros que 
+intermediam as requisições dos clientes e o recebimento dessas informações.
+
+-aplicação
+são os ambientes de execução eficiente dos aplicativos utilizados pelos usuários.
+
+-FTP
+file transfer protocol são servidores para transferência de arquivos, através de download e upload, 
+principalmente em ambientes cloud.
+
+Servidores em nuvem
+são baseados em datacenters com supercomputadores para atender demandas globais de processamento e
+armazenagem de dados.
+
+
+
+
 
 
 
