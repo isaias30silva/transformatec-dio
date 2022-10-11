@@ -260,6 +260,18 @@ Aula 142 - Criação de Máquinas Virtuais com Amazon EC2**(Publicação do Back
 
 Amazon Elastic Compute Cloud(EC2)
 
+Os 3 principais serviços da AWS:
+IAM - security
+EC2 - computer servers
+S3 - storage
+
+Amazon EC2- Recursos
+-aluguel de máquinas virtuais(EC2)
+-armazenamento de dados em drives virtuais(EBS)
+-balanceamento de cargas(ELB)
+-auto escalável(ASG)
+
+
 
 
 
