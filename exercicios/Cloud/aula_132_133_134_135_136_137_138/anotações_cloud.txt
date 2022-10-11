@@ -149,6 +149,10 @@ Professor ensinou a acessar o IAM no console, criar novo usuário, gerar credenc
 atribuir permissões ao novo usuário criado, acessar o controle da AWS com o novo usuário criado,
 testar permissões de acesso atribuídas.
 
+____________________________________________________________________________________________________________
+
+Aula 138 - Banco de Dados não relacionais com Amazon DynamoDB
+
 
 
 
