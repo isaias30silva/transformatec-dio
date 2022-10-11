@@ -40,7 +40,7 @@ Repositório de exercícios e desafios do Transforma Tec - 2022
 >
 > :nine: [Módulo VIII - Projeto FullStack: React + Spring Boot](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/Projeto_Fullstack/aula123)
 >
-> :keycap_ten: Módulo IX - Cloud
+> :keycap_ten: [Módulo IX - Cloud](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/Cloud)
 >
 >  :hourglass:Carga horária: 420 horas
 
