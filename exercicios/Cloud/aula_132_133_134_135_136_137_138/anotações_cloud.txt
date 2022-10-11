@@ -153,6 +153,31 @@ ________________________________________________________________________________
 
 Aula 138 - Banco de Dados não relacionais com Amazon DynamoDB
 
+NoSQL
+Bancos de dados NoSQL(Not only SQL) são criados para modelos de dados específicos e têm esquemas flexíveis
+para a criação de aplicativos modernos.
+
+Os bancos de dados NoSQL possuem facilidade de desenvolvimento, funcionalidade e performance em escala, 
+podendo ser estruturados ou não.
+
+SQL
+Em um banco de dados relacional, os registros são normalizados em tabelas separadas, com relacionamentos
+definidos por chaves primárias e estrangeiras.
+
+NoSQL
+Em um banco de dados não relacional utilizando normalmente esquemas de pares chave/valor, grafos,
+família de colunas e documentos.
+
+Amazon DynamoDB
+
+-banco de dados de chave-valor NoSQL
+-sem servidor e totalmente gerenciado
+-executar aplicações de alta performance em qualquer escala
+-replicação multiregional automatizada
+-armazenamento em cache na memória e ferramentas de exportação de dados
+
+
+
 
 
 
