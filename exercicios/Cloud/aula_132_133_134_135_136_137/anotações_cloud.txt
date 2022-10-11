@@ -137,6 +137,20 @@ ________________________________________________________________________________
 
 Aula 136 - Revisão, Dúvidas e Resolução de Exercícios
 
+____________________________________________________________________________________________________________
+
+Aula 137 - Gerenciamento de Identidades e Acessos com AWS IAM
+
+AWS Identity and Access Management - IAM, para configurações de permissões e acessos aos serviços na AWS.
+IAM permite o gerenciamento seguro do acesso aos serviços e recursos da AWS por meio da criação de usuário, 
+grupos de usuários e permissões.
+
+Professor ensinou a acessar o IAM no console, criar novo usuário, gerar credenciais de acesso, 
+atribuir permissões ao novo usuário criado, acessar o controle da AWS com o novo usuário criado,
+testar permissões de acesso atribuídas.
+
+
+
 
 
 
