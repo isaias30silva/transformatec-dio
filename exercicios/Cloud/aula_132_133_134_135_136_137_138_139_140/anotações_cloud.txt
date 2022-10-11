@@ -193,7 +193,62 @@ de bancos de dados, aplicação de patches e backups.
 O Amazon RDS é um banco de dados baseado em servidores, utilizando o serviço Amazon EC2 para provisionamento
 da infraestrutura.
 
+___________________________________________________________________________________________________________
 
+Aula 140 - Repositório de Arquivos com Amazon S3(Publicação do Front-end)
+
+Amazon Simple Storage Service (S3)
+oferece alta escalabilidade, disponiblidade de dados, segurança e performance para aplicações.
+
+Conceitos do Amazon S3
+-buckets
+-objetos
+-chaves
+
+Buckets do Amazon S3
+é um contêiner para objetos armazenados no Amazon S3, permitindo armazenar qualquer número de objetos
+em um bucket, e você pode ter até 100 buckets na sua conta. 
+
+bucket - balde(tradução)
+
+Objetos do Amazon S3
+-são entidades fundamentais no Amazon S3. Consistem em metadados e dados de objeto.
+-metadados são um conjunto de pares de nome e valor que descrevem o objeto.
+
+Chaves do Amazon S3
+-uma chave de objeto (ou nome da chave) é um identificador exclusivo de um objeto em um bucket.
+-cada objeto em um bucket tem exatamente uma chave única.
+
+Gerenciamento no S3
+-ciclo de vida de objetos
+-bloqueio de objetos
+-replicação de objetos
+-versionamento de objetos
+
+Acesso no S3
+-bloqueio de acesso público,
+-IAM,
+-polítics de acesso,
+-ACL
+
+Processamento no S3
+-lambda
+-eventos e notificações
+
+Usos do Amazon S3
+-armazenamento de arquivos para aplicações web
+-arquivos de backups e logs
+-armazenamento de grande volume de dados
+-replicação de dados entre diferentes regioes
+-hospedagem de sites estáticos
+-data lakes
+
+Recursos do Amazon S3
+-criação de buckets
+-armazenamento de dados e arquivos
+-download de dados e arquivos
+-criação de permissões
+-interface simples e padrão
 
 
 
