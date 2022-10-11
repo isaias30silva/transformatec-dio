@@ -249,7 +249,16 @@ Recursos do Amazon S3
 -download de dados e arquivos
 -criação de permissões
 -interface simples e padrão
+_______________________________________________________________________________________________________
 
+Aula 141 - Revisão, Dúvidas e Resolução de exercícios
+
+Foi explicado o projeto final, que será individual com apresentação no formato de pitch.
+_______________________________________________________________________________________________________
+
+Aula 142 - Criação de Máquinas Virtuais com Amazon EC2**(Publicação do Back-end)
+
+Amazon Elastic Compute Cloud(EC2)
 
 
 
