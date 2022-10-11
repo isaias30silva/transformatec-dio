@@ -270,11 +270,27 @@ Amazon EC2- Recursos
 -armazenamento de dados em drives virtuais(EBS)
 -balanceamento de cargas(ELB)
 -auto escalável(ASG)
+__________________________________________________________________________________________________________
 
+Aula 143 - Backend Serverless com AWS Lambda
 
+Serverless computing, ou apenas serverless é um modelo de execução onde o provedor de nuvem é
+responsável pela provisão dos recursos para a execução do código, os alocando de forma dinâmica e 
+cobrando apenas pelo seu uso.
 
+O código é executado em containers sem estado acionados por eventos(requisições HTTP, eventos de banco
+de dados, serviços de filas, alertas, uploads de arquivos, etc).
 
+O código é enviado para a nuvem na forma de funções-Function-as-a-Service, com os seus componentes
+principais sendo descritos a seguir.
 
+Microservices: a aplicação deve ser arquitetada na forma de funções desacopladas.
 
+Statless functions: os containers são destruídos após a execução da função, não armazenando seu estado.
 
+Cold Starts: latência para responder a um evento quando ativado sob demanda.
+
+AWS Lambda
+serviço gerenciado pela AWS que permite a execução de código sem a necessidade da provisão e
+gerenciamento de servidores.
 
