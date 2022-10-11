@@ -176,8 +176,22 @@ Amazon DynamoDB
 -replicação multiregional automatizada
 -armazenamento em cache na memória e ferramentas de exportação de dados
 
+__________________________________________________________________________________________________________
+
+Aula 139 - Banco de Dados SQL com Amazon RDS
 
 
+Banco relacional = quando uma chave primaria é uma chave estrangeira em outra tabela
+
+O Amazon Relational Database Service(Amazon RDS) facilita a configuração, a operação e a escalabilidade
+de bancos de dados relacionais na nuvem.
+
+Amazon RDS
+fornece capacidade econômica e redimensionável e automatiza o provisionamento de hardware, configuração
+de bancos de dados, aplicação de patches e backups.
+
+O Amazon RDS é um banco de dados baseado em servidores, utilizando o serviço Amazon EC2 para provisionamento
+da infraestrutura.
 
 
 
