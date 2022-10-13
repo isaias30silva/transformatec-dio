@@ -334,6 +334,30 @@ ________________________________________________________________________________
 
 Aula 146 - Revisão, Dúvidas e Resolução de Exercícios
 
+___________________________________________________________________________________________________________
+
+Aula 147 - Deploy de Aplicações ReactJS com AWS Amplify
+
+AWS Amplify - é um framework (conjunto de ferramentas) para agilizar o desenvolvimento de aplicações
+web e mobile nuvem. permite aos devs de frontend para plataformas móveis e Web criem, enviem e hospedem 
+aplicações full-stack na AWS.
+
+___________________________________________________________________________________________________________
+
+Aula 148 - Infraestrutura como Código com AWS CloudFormation
+
+Infraestrutura como código(IaC) refere-se ao gerenciamento e provisionamento da infraestrutura por meio 
+de códigos, em vez de processos manuais.
+
+A IaC é uma parte importante da implementação de práticas de DevOps e CI/CD, pois elimina a maioria do 
+trabalho de provisionamento realizado pelos desenvolvedores.
+
+AWS CloudFormation
+é um serviço que fornece uma forma fácil de criar uma estrutura de recursos da AWS, provisioná-los e
+gerenciá-los de forma organizada e previsível.
+permite a formatação de modelos com os recursos alocados para a implantação de infraestrutura por meio
+de stacks, que permitem o deploy, atualização e exclusão de templates de recursos. 
+
 
 
 
