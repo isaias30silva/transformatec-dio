@@ -357,13 +357,11 @@ AWS CloudFormation
 gerenciá-los de forma organizada e previsível.
 permite a formatação de modelos com os recursos alocados para a implantação de infraestrutura por meio
 de stacks, que permitem o deploy, atualização e exclusão de templates de recursos. 
+___________________________________________________________________________________________________________
 
+Aula 149 - Infraestrutura como Código com Serverless Framework
 
-
-
-
-
-
-
-
-
+O AWS SAM é um serviço derivado do AWS CloudFormation que simplifica a sintaxe para construir aplicações
+serverless por meio de IaC
+é um framework open-source para construção de aplicações serverless.
+os templates são desenvolvidos no formato JSON ou YAML.
