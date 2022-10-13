@@ -293,4 +293,32 @@ Cold Starts: latência para responder a um evento quando ativado sob demanda.
 AWS Lambda
 serviço gerenciado pela AWS que permite a execução de código sem a necessidade da provisão e
 gerenciamento de servidores.
+____________________________________________________________________________________________________________
+
+Aula 144 - Desenvolvimento de API com API Gateway
+
+API - Interface de Programação de Aplicações, do inglês Application Programming Interface, um conjunto de
+definições e protocolos para criar e integrar softwares de aplicações.
+
+Uma API permite que soluções e serviços se comuniquem porém de forma desacoplada, atuando como um contrato
+que determina como as solicitações/requisições devem ser formatadas.
+
+Application -> API Request -> Databases -> API Response
+
+Amazon API Gateway
+Serviço para criação, publicação, manutenção, monitoramento e proteção de APIs REST e WebSocket em qualquer
+escala.
+
+Tipos de API
+HTTP: otimizadas para criar APIs que são proxy para funções do AWS Lambda ou back-ends HTTP, e ideais para
+cargas de trabalho sem servidor.
+
+REST: oferecem recursos de gerenciamento de API, como planos de uso, chaves de API e APIs de publicação e 
+monetização.
+
+WebSockets: mantêm uma conexão persistente entre clientes conectados para permitir a comunicação de 
+mensagens em tempo real.
+
+
+
 
