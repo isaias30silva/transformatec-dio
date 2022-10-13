@@ -330,6 +330,10 @@ utiliza o protocolo OAuth 2.0 para autorizar o acesso aos recursos. utiliza toke
 
 Para controlar o acesso de usuários e evitar acessos indesejados, são utilizados métodos de autenticação
 e autorização de usuários em aplicações.
+___________________________________________________________________________________________________________
+
+Aula 146 - Revisão, Dúvidas e Resolução de Exercícios
+
 
 
 
