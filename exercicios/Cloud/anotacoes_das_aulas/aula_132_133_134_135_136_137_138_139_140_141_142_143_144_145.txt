@@ -318,6 +318,23 @@ monetização.
 
 WebSockets: mantêm uma conexão persistente entre clientes conectados para permitir a comunicação de 
 mensagens em tempo real.
+___________________________________________________________________________________________________________
+
+Aula 145 - Segurança de API com Amazon Cognito
+
+Amazon Cognito: 
+oferece soluções para controlar o acesso de um aplicativo a recursos da AWS.
+permite definir regras e mapear usuários a funções diferentes para que o aplicativo possa acessar apenas os
+recursos autorizados para cada usuário.
+utiliza o protocolo OAuth 2.0 para autorizar o acesso aos recursos. utiliza tokens de acesso para garantir acesso.
+
+Para controlar o acesso de usuários e evitar acessos indesejados, são utilizados métodos de autenticação
+e autorização de usuários em aplicações.
+
+
+
+
+
 
 
 
