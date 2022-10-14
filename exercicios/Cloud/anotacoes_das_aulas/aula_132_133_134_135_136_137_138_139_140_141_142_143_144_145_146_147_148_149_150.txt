@@ -365,3 +365,36 @@ O AWS SAM é um serviço derivado do AWS CloudFormation que simplifica a sintaxe
 serverless por meio de IaC
 é um framework open-source para construção de aplicações serverless.
 os templates são desenvolvidos no formato JSON ou YAML.
+
+___________________________________________________________________________________________________________
+
+Aula 150 - Infraestrutura como Código com Terraform 
+
+A palavra DevOps é a combinação dos termos desenvolvimento e operações, mas representa um conjunto de ideias
+e práticas que vão muito além do significado desses dois termos.
+
+Composto de DEV(desenvolvimento) e OPS(operações), o DEVOPS é a união de pessoas, processos e tecnologias para
+fornecer continuamente valor aos clientes.
+
+O DevOps influencia o ciclo de vida do aplicativo em todas as fases do planejamento, do desenvolvimento, 
+da entrega e da operação.
+
+Ciclo de vida:
+Planejar / Desenvolver / Fornecimento / Operação
+
+Benefícios de DevOps:
+Aceleração / Adaptação / Estabilidade / Recuperação
+
+Cultura DevOps (compostamento humano)
+-colaboração, visibilidade e alinhamento
+-mudanças de escopo e de responsabilidade
+-ciclos de lançamento mais curtos
+-aprendizado contínuo
+
+Práticas DevOps (ações)
+-CI/CD (Integração Contínua e Entrega Contínua)
+-Controle de versão
+-Infraestrutura como código
+-Gerenciamento de configuração
+-Monitoramento contínuo
+
