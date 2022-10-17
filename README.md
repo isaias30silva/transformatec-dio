@@ -18,7 +18,7 @@ Repositório de exercícios e desafios do Transforma Tec - 2022
 >
 > Com estes aprendizados, os alunos são capacitados para trabalhar em todas etapas de projetos de desenvolvimento, sendo em banco de dados, servidor, armazenamento em nuvem e outros.
 >
->  As aulas são diárias e **online** com 2 horas de duração. 
+> As aulas são diárias e **online** com 2 horas de duração. 
 >
 > #### Conteúdo Programático
 >
@@ -42,7 +42,9 @@ Repositório de exercícios e desafios do Transforma Tec - 2022
 >
 > :keycap_ten: [Módulo IX - Cloud](https://github.com/isaias30silva/transformatec-dio/tree/master/exercicios/Cloud)
 >
->  :hourglass:Carga horária: 420 horas
+> :ballot_box_with_check: [Projeto Final(Base)]()
+>
+> :hourglass:Carga horária: 420 horas
 
 ### Plataforma de estudo:
 
